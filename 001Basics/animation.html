@@ -24,9 +24,21 @@
     <meta charset="UTF-8">
     <title>送给豆豆的春夏秋冬</title>
 <link rel="Stylesheet" type="text/css" href="css/page.css"/>
+    <script>
+        function audioAutoPLay(id) {
+            var audio = document.getElementById(id);
+            audio.play();
+            document.addEventListener("WeixinJSBridgeReady",function () {
+                audio.play();
+            },false);
+            document.addEventListener("YixinJSBridgeReady",function () {
+                audio.play();
+            },false);
+            }
+    </script>
 </head>
 <body>
-<audio src="wav/郭燕 - 天空之城 (钢琴版).mp3" autoplay="autoplay" loop="loop">
+<audio src="wav/郭燕 - 天空之城 (钢琴版).mp3" preload="auto" autoplay="autoplay" loop="loop">
 </audio>
 <!--<p>一个动画小尝试</p>-->
 <page id="c">春</page>
