@@ -1,5 +1,5 @@
 page{
-    font-size: 270px;
+    font-size: 180px;
     position: absolute;
     text-align: center;
     padding-top: 40%;
@@ -39,7 +39,7 @@ html,body,page{
     font-family: 楷体;
 }
 #z{
-    font-size: 72px;
+    font-size: 32px;
     display: block;
     animation:  z 10s infinite;
 }
