@@ -2,7 +2,7 @@ page{
     font-size: 180px;
     position: absolute;
     text-align: center;
-    padding-top: 30%;
+    padding-top: 40%;
 }
 html,body,page{
     height:100%;
@@ -10,20 +10,56 @@ html,body,page{
     margin:0;
 }
 #c{
-    background-color: lightgreen;
+    background-image: url("../images/春.jpg");
+    background-size: 100% 100%;
+    /*background-color: lightgreen;*/
     animation: c 10s infinite;
+    font-family: 仿宋;
 }
 #s{
-    background-color: aqua;
+    background-image: url("../images/夏.jpg");
+    background-size: 100% 100%;
+    /*background-color: aqua;*/
     animation: s 10s infinite;
+    padding-top: 30%;
 }
 #q{
-    background-color: gold;
+    background-image: url("../images/秋天.jpeg");
+    background-size: 100% 100%;
+    /*background-color: gold;*/
     animation: q 10s infinite;
+    color: cadetblue;
+    font-family: 楷体;
 }
 #d{
-    background-color: seashell;
+    background-image: url("../images/冬.jpg");
+    background-size: 100% 100%;
+    /*background-color: seashell;*/
     animation: d 10s infinite;
+    color: whitesmoke;
+    font-family: 楷体;
+}
+#z{
+    font-size: 36px;
+    display: block;
+    animation:  z 10s infinite;
+}
+@keyframes z {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 100;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 @keyframes c {
     0%{opacity: 0;}
