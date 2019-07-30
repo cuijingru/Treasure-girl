@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var number;
+        number = prompt("请输入数量");
+        if (isNaN(number)) {
+            document.write("请输入一个数字");
+        }
+        else {
+            if (number==1) {
+                var price;
+                price = prompt("请输入价格");
+                if (isNaN(price)) {
+                    document.write("请输入一个数字");
+                }
+                price = price;
+                document.write("现在的价格是"+price);
+            }
+            else if(number==2){
+                var price;
+                price = prompt("请输入价格");
+                if (isNaN(price)) {
+                    document.write("请输入一个数字");
+                }
+                price = price/2+(number-1)*price;
+                document.write("第二杯半价"+price);
+            }
+            else {
+                var price;
+                price = prompt("请输入价格");
+                if (isNaN(price)) {
+                    document.write("请输入一个数字");
+                }
+                price = price/2+(number-1)*price;
+                document.write("现在的价格是"+price);
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
