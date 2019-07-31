@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            height: 100%;
+            text-align: center;
+            font-size: 200px;
+        }
+    </style>
+</head>
+<body onclick="gogogo(123)">
+
+</body>
+<script>
+    var num = 1;
+    function gogogo() {
+        if(num%7==0){
+            document.body.innerHTML= "过";
+        }
+        else{
+            document.body.innerHTML= num;
+        }
+        num += 1;
+    }
+</script>
+</html>
