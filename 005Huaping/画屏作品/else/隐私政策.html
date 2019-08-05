@@ -1,0 +1,284 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title></title>
+    	<meta charset="utf-8">
+        <link rel="short icon" type="text/css" href="../picture/logo/logo.png"/>
+    	<style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .bg{
+            background: url(bg-1.jpg);
+            position: fixed;
+            width: 100%;
+            height: 1000px;
+            z-index: -5;
+        }
+        .top{
+            background:url(white.png);
+            width: 100%;
+            height: 135px;
+            opacity: 1;
+            position: fixed;
+            z-index: 5;
+        }
+        .top3{
+            background-color: white;
+            width: 100%;
+            height: 135px;
+            opacity: 1;
+        }
+        .choosecolor{
+            float: left;
+            margin-top: 90px;
+        }
+        .top1{
+            width: 200px;
+            height: 24px;
+            z-index: 1;
+        }
+        .top1 li{
+            height: 24px;
+            width: 24px;
+            float: left;
+            list-style: none;
+            margin: 0px 5px;
+            text-align: center;
+            border: solid 1px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #ch-n{
+            border-color: rgba(256,256,256,0.2);
+            background-color: rgba(256,256,256,0.2);
+        }
+        #ch-r{
+            border-color: rgba(256,0,0,0.2);
+            background-color: rgba(256,0,0,0.2);
+        }
+        #ch-b{
+            border-color: rgba(135,206,235,0.2);
+            background-color: rgba(135,206,235,0.2);
+        }
+        #ch-g{
+            border-color: rgba(0,128,0,0.2);
+            background-color: rgba(0,128,0,0.2);
+        }
+        .top2 li{
+            float:left;
+            list-style: none;
+            font-family: "华文行楷";
+            color: white;
+            margin: 0px 5px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .top2{
+            padding-top: 90px;
+            padding-left: 960px;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        a:hover{
+                color: #C2C2C2;
+        }
+        .list{
+            width: 30%;
+            height: 700px;
+            float: left;
+            background-color: rgba(256,256,256,0.2);
+        }
+        .tab{
+            color: black;
+            opacity: 1;
+            margin: 0px 10%;
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            width: 80%;
+            height: 100%;
+        }
+        .tab a{
+            transition: all 0.5s;
+        }
+        .tab a:hover{
+            letter-spacing: 40px;
+            width: 50%;
+        }
+        .list ul{
+            list-style: none;
+            margin-left: 28px;
+            padding-top: 10px;
+            height: 110px;
+            line-height: 110px;
+        }
+        .list ul li{
+            color: black;
+            font-family: "华文隶书";
+            font-size: 30px;
+        }
+        .contant{
+            width: 70%;
+            height: 700px;
+            float: left;
+            background-color: rgba(256,256,256,0.2);
+        }
+        .contant p{
+            text-align: left;
+            margin-right: 30px;
+            text-indent: 2em;
+            line-height: 30px;
+            font-family: "黑体";
+        }
+        #c-title{
+            margin-top: 50px;
+            text-align: center;
+            font-family: "华文隶书";
+            font-size: 30px;
+        }
+        hr{
+            margin-right: 30px;
+        }
+        .footer{
+            background-color: rgba(256,256,256,0.2);
+            width: 100%;
+            height: 100px;
+            float: left;
+            text-align: center;
+        }
+        #txt{
+            margin-top: 50px;
+        }
+        .wu{
+            float: left;
+            margin-top: -84px;
+            margin-left: 695px;
+        }
+    	</style>
+    </head>
+    <body>
+        
+        <div class="bg">
+        </div>
+        <div class="top">
+            <div id="logo">
+            <a href="../index.html"><img src="../picture/logo/logo.png" width="150" height="130" style="float: left;"></a>
+        </div>
+            <div class="choosecolor">
+                <ul class="top1">
+                    <li id="ch-n">n</li>
+                    <li id="ch-r">r</li>
+                    <li id="ch-b">b</li>
+                    <li id="ch-g">g</li>
+                </ul>
+            </div>
+            <ul class="top2">
+                <li><a href="../login.html">登录</a></li>
+                <li>|</li>
+                <li><a href="../join.html">注册</a></li>
+                <li>|</li>
+                <li><a href="../search.html">搜索</a></li>
+            </ul>
+        </div>
+        <div class="top3">
+        </div>
+        <div class="center">
+            <div class="list">
+                <div class="tab">
+                    <ul>
+                        <li><a href="DC画屏.html">画屏</a></li>
+                        <li><a href="关于我们.html">交流社区</a></li>
+                        <li><a href="意见反馈.html">意见反馈</a></li>
+                        <li><a href="联系我们.html">联系我们</a></li>
+                        <li><a href="服务条例.html">服务条例</a></li>
+                        <li><a href="隐私政策.html">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contant">
+                <p id="c-title">隐私条例</p>
+                <hr>
+                <p>画屏视用户信息安全与隐私保护为自己的“生命线”。我们秉承“一切以用户价值为依归”的理念，致力于提升信息处理透明度，增强您对信息管理的便捷性，保障您的信息及通信安全。</p>
+
+<p>画屏严格遵守法律法规，遵循以下隐私保护原则，为您提供更加安全、可靠的服务：</p>
+
+<p>1、
+安全可靠：我们竭尽全力通过合理有效的信息安全技术及管理流程，防止您的信息泄露、损毁、丢失。</p>
+
+<p>2、
+自主选择：我们为您提供便利的信息管理选项，以便您做出合适的选择，管理您的个人信息。</p>
+
+<p>3、
+保护通信秘密：我们严格遵照法律法规，保护您的通信秘密，为您提供安全的通信服务。</p>
+
+<p>4、
+合理必要：为了向您和其他用户提供更好的服务，我们仅收集必要的信息。</p>
+
+<p>5、
+清晰透明：我们努力使用简明易懂的表述，向您介绍隐私政策，以便您清晰地了解我们的信息处理方式。</p>
+
+<p>6、
+将隐私保护融入产品设计：我们在产品或服务开发的各个环节，综合法律、产品、设计等多方因素，融入隐私保护的理念。</p>
+
+<p>本《隐私政策》主要向您说明：</p>
+
+<p>我们收集哪些信息；</p>
+
+<p>我们收集信息的用途；</p>
+
+<p>您所享有的权利。</p>
+
+<p>希望您仔细阅读《隐私政策》（以下简称“本政策”），详细了解我们对信息的收集、使用方式，以便您更好地了解我们的服务并作出适当的选择。</p>
+
+<p>若您使用画屏服务，即表示您认同我们在本政策中所述内容。除另有约定外，本政策所用术语与《画屏服务协议》中的术语具有相同的涵义。</p>
+
+<p>如您有问题，请联系我们。</p>
+            </div>
+        </div>
+        <div class="footer">
+            <ul id="txt">
+                <li>版权所有 ©2019- 画屏</li>
+            </ul>
+            <img src="wu.png" width="80" height="110" class="wu">
+        </div>
+        <script type="text/javascript">
+            var cn=document.getElementById("ch-n");
+            var cr=document.getElementById("ch-r");
+            var cb=document.getElementById("ch-b");
+            var cg=document.getElementById("ch-g");
+            var t=document.getElementsByClassName("top")[0];
+            var l=document.getElementsByClassName("list")[0];
+            var c=document.getElementsByClassName("contant")[0];
+            var f=document.getElementsByClassName("footer")[0];
+            cn.onclick=function(){
+                t.style.background="url(white.png)";
+                l.style.backgroundColor="rgba(256,256,256,0.2)";
+                c.style.backgroundColor="rgba(256,256,256,0.2)";
+                f.style.backgroundColor="rgba(256,256,256,0.2)";
+            }
+            cr.onclick=function(){
+                t.style.background="url(red.png)";
+                l.style.backgroundColor="rgba(256,0,0,0.2)";
+                c.style.backgroundColor="rgba(256,0,0,0.2)";
+                f.style.backgroundColor="rgba(256,0,0,0.2)";
+            }
+            cb.onclick=function(){
+                t.style.background="url(blue.png)";
+                l.style.backgroundColor="rgba(135,206,235,0.2)";
+                c.style.backgroundColor="rgba(135,206,235,0.2)";
+                f.style.backgroundColor="rgba(135,206,235,0.2)";
+            }
+            cg.onclick=function(){
+                t.style.background="url(green.png)";
+                l.style.backgroundColor="rgba(0,128,0,0.2)";
+                c.style.backgroundColor="rgba(0,128,0,0.2)";
+                f.style.backgroundColor="rgba(0,128,0,0.2)";
+            }
+        </script>
+    </body>
+</html>

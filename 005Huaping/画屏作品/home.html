@@ -1,0 +1,1422 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>画屏</title>
+    	<meta charset="utf-8">
+        <link rel="short icon" type="text/css" href="./picture/logo/logo.png"/>
+    	<style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+            body{
+                /*background: url("bg.jpg") no-repeat;
+                background-attachment: fixed;
+                background-size: cover;*/
+            }
+            .background1{
+                z-index: -2;
+                position: fixed;
+                overflow:scroll;
+                height: 100%;
+                width: 100%;
+            }
+    		.top{
+    			width: 100%;
+    			height: 600px;
+    			background-color: rgba(0,0,0,0);
+               /* background-color: #97cba9;*/
+    		}
+            .wlogo{
+                float: left;
+                margin: 390px 0px 0px 150px;
+            }
+            .top ul li{
+                float:left;
+                list-style: none;
+                font-family: "华文行楷";
+                color: white;
+                margin: 0px 5px;
+                font-size: 24px;
+            }
+            .top ul{
+                padding-top: 560px;
+                padding-left: 1000px;
+            }
+            a{
+                color: black;
+                text-decoration: none;
+            }
+            a:hover{
+                color: white;
+            }
+            .contant{
+                height: 687px;
+                width: 100%;
+                background-color: #e2ded3;
+            }
+            .dropdown-botton1{
+              height: 50px;
+              background-color: blue;
+              width: 50px;
+              margin-left: 1000px;
+              margin-bottom: -50px;
+              margin-top: 30px;
+            }
+            .dropdown-botton2{
+              height: 50px;
+              background-color: red;
+              width: 50px;
+              margin-left: 1100px;
+              margin-top: -50px;
+              margin-bottom: -50px;
+            }
+            .dropdown-content1{
+                font-family: 华文隶书;
+                font-size: 26px;
+                text-indent: 2em;
+
+            }
+            hr{
+                border-width: 1px;
+                border-color: white;
+            }
+            .dropdown{
+                display: none;
+                width: 100%;
+            }
+            h1{
+                font-family: "华文行楷";
+                padding: 32px 80px 30px;
+                cursor: pointer;
+            }
+            .footer{
+    			width: 100%;
+    			height: 1000px;
+    			background-color: rgba(0,0,0,0);
+    		}
+            .footer ul{
+                margin-left: 400px;
+                padding-top: 950px;
+            }
+            .footer ul li{
+                float: left;
+                font-family: "黑体";
+                font-size: 12px;
+                color: black;
+                list-style: none;
+            }
+            .footer a{
+                color: black;
+            }
+            .wu{
+              float: left;
+              margin-top: -80px;
+              margin-left: -52px;
+            }
+            .cont {
+                position: relative;
+                overflow: hidden;
+                height: 500px;
+                padding: 80px 70px 80px;
+            }
+            .cont__inner {
+                position: relative;
+                height: 100%;
+            }
+            .cont__inner:hover .el__bg:after {
+                opacity: 1;
+            }
+
+            .el {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 19.2%;
+                height: 100%;
+                background: #252525;
+  /*transition过渡属性 -webkit-transition:宽度时间为两秒，transform旋转时间为两秒*/
+                -webkit-transition: width 0.7s, opacity 0.6s 0.7s, z-index 0s 1.3s, -webkit-transform 0.6s 0.7s;
+                transition: width 0.7s, opacity 0.6s 0.7s, z-index 0s 1.3s, -webkit-transform 0.6s 0.7s;
+                transition: transform 0.6s 0.7s, width 0.7s, opacity 0.6s 0.7s, z-index 0s 1.3s;
+                transition: transform 0.6s 0.7s, width 0.7s, opacity 0.6s 0.7s, z-index 0s 1.3s, -webkit-transform 0.6s 0.7s;
+                will-change: transform, width, opacity;
+            }
+            .el:not(.s_active) {
+                cursor: pointer;
+            }
+            .el__overflow {
+                overflow: hidden;
+                position: relative;
+                height: 100%;
+            }
+            .el__inner {
+                overflow: hidden;
+                position: relative;
+                height: 100%;
+                -webkit-transition: -webkit-transform 1s;
+                transition: -webkit-transform 1s;
+                transition: transform 1s;
+                transition: transform 1s, -webkit-transform 1s;
+            }
+            .cont.s_inactive .el__inner {
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+            }
+            .el__bg {
+                position: relative;
+                width: calc(100vw - 140px);
+                height: 100%;
+                -webkit-transition: -webkit-transform 0.6s 0.7s;
+                transition: -webkit-transform 0.6s 0.7s;
+                transition: transform 0.6s 0.7s;
+                transition: transform 0.6s 0.7s, -webkit-transform 0.6s 0.7s;
+                will-change: transform;
+            }
+            .el__bg:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: -5%;
+                width: 100%;
+                height: 110%;
+                background-size: cover;
+                background-position: center center;
+                -webkit-transition: -webkit-transform 1s;
+                transition: -webkit-transform 1s;
+                transition: transform 1s;
+                transition: transform 1s, -webkit-transform 1s;
+                -webkit-transform: translate3d(0, 0, 0) scale(1);
+                transform: translate3d(0, 0, 0) scale(1);
+            }
+              .cont.s_inactive .el__bg:before {
+                -webkit-transform: translate3d(0, -100%, 0) scale(1.2);
+                        transform: translate3d(0, -100%, 0) scale(1.2);
+                          }
+            .el.s_active .el__bg:before {
+                -webkit-transition: -webkit-transform 0.8s;
+                transition: -webkit-transform 0.8s;
+                transition: transform 0.8s;
+                transition: transform 0.8s, -webkit-transform 0.8s;
+            }
+            .el__bg:after {
+                content: "";
+                z-index: 1;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.3);
+                opacity: 0;
+                -webkit-transition: opacity 0.5s;
+                transition: opacity 0.5s;
+            }
+              .cont.s_el-active .el__bg:after {
+                -webkit-transition: opacity 0.5s 1.4s;
+                transition: opacity 0.5s 1.4s;
+                opacity: 1 !important;
+            }
+            .el__preview-cont {
+                z-index: 2;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                 justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                -webkit-transition: all 0.3s 1.2s;
+                transition: all 0.3s 1.2s;
+            }
+            .cont.s_inactive .el__preview-cont {
+                opacity: 0;
+                -webkit-transform: translateY(10px);
+                        transform: translateY(10px);
+            }
+            .cont.s_el-active .el__preview-cont {
+                opacity: 0;
+                -webkit-transform: translateY(30px);
+                transform: translateY(30px);
+                -webkit-transition: all 0.5s;
+                transition: all 0.5s;
+            }
+            .el__heading {
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 18px;
+            }
+            .el__content {
+                z-index: -1;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 95%;
+                height: 100%;
+                padding: 30px;
+                opacity: 0;
+                pointer-events: none;
+                -webkit-transition: all 0.1s;
+                transition: all 0.1s;
+            }
+            .el.s_active .el__content {
+                z-index: 2;
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transition: all 0.5s 1.4s;
+                transition: all 0.5s 1.4s;
+            }
+.el__text {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: #fff;
+}
+.el__close-btn {
+  z-index: -1;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0s 0.45s;
+  transition: all 0s 0.45s;
+  cursor: pointer;
+}
+.el.s_active .el__close-btn {
+  z-index: 5;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: all 0s 1.4s;
+  transition: all 0s 1.4s;
+}
+.el__close-btn:before, .el__close-btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 8px;
+  margin-top: -4px;
+  background: #fff;
+  opacity: 0;
+  -webkit-transition: opacity 0s;
+  transition: opacity 0s;
+}
+.el.s_active .el__close-btn:before, .el.s_active .el__close-btn:after {
+  opacity: 1;
+}
+.el__close-btn:before {
+  -webkit-transform: rotate(45deg) translateX(100%);
+          transform: rotate(45deg) translateX(100%);
+}
+.el.s_active .el__close-btn:before {
+  -webkit-transition: all 0.3s 1.4s cubic-bezier(0.72, 0.09, 0.32, 1.57);
+  transition: all 0.3s 1.4s cubic-bezier(0.72, 0.09, 0.32, 1.57);
+  -webkit-transform: rotate(45deg) translateX(0);
+          transform: rotate(45deg) translateX(0);
+}
+.el__close-btn:after {
+  -webkit-transform: rotate(-45deg) translateX(100%);
+          transform: rotate(-45deg) translateX(100%);
+}
+.el.s_active .el__close-btn:after {
+  -webkit-transition: all 0.3s 1.55s cubic-bezier(0.72, 0.09, 0.32, 1.57);
+  transition: all 0.3s 1.55s cubic-bezier(0.72, 0.09, 0.32, 1.57);
+  -webkit-transform: rotate(-45deg) translateX(0);
+          transform: rotate(-45deg) translateX(0);
+}
+.el:nth-child(1) {
+  -webkit-transform: translate3d(0%, 0, 0);
+          transform: translate3d(0%, 0, 0);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+.cont.s_el-active .el:nth-child(1):not(.s_active) {
+  -webkit-transform: scale(0.5) translate3d(0%, 0, 0);
+          transform: scale(0.5) translate3d(0%, 0, 0);
+  opacity: 0;
+  -webkit-transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: transform 0.95s, opacity 0.95s;
+  transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s;
+}
+.el:nth-child(1) .el__inner {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+.el:nth-child(1) .el__bg {
+  -webkit-transform: translate3d(0%, 0, 0);
+          transform: translate3d(0%, 0, 0);
+}
+.el:nth-child(1) .el__bg:before {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+.el:nth-child(2) {
+  -webkit-transform: translate3d(105.2083333333%, 0, 0);
+          transform: translate3d(105.2083333333%, 0, 0);
+  -webkit-transform-origin: 155.2083333333% 50%;
+          transform-origin: 155.2083333333% 50%;
+}
+.cont.s_el-active .el:nth-child(2):not(.s_active) {
+  -webkit-transform: scale(0.5) translate3d(105.2083333333%, 0, 0);
+          transform: scale(0.5) translate3d(105.2083333333%, 0, 0);
+  opacity: 0;
+  -webkit-transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: transform 0.95s, opacity 0.95s;
+  transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s;
+}
+.el:nth-child(2) .el__inner {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+.el:nth-child(2) .el__bg {
+  -webkit-transform: translate3d(-19.2%, 0, 0);
+          transform: translate3d(-19.2%, 0, 0);
+}
+.el:nth-child(2) .el__bg:before {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+.el:nth-child(3) {
+  -webkit-transform: translate3d(210.4166666667%, 0, 0);
+          transform: translate3d(210.4166666667%, 0, 0);
+  -webkit-transform-origin: 260.4166666667% 50%;
+          transform-origin: 260.4166666667% 50%;
+}
+.cont.s_el-active .el:nth-child(3):not(.s_active) {
+  -webkit-transform: scale(0.5) translate3d(210.4166666667%, 0, 0);
+          transform: scale(0.5) translate3d(210.4166666667%, 0, 0);
+  opacity: 0;
+  -webkit-transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: transform 0.95s, opacity 0.95s;
+  transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s;
+}
+.el:nth-child(3) .el__inner {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.el:nth-child(3) .el__bg {
+  -webkit-transform: translate3d(-38.4%, 0, 0);
+          transform: translate3d(-38.4%, 0, 0);
+}
+.el:nth-child(3) .el__bg:before {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.el:nth-child(4) {
+  -webkit-transform: translate3d(315.625%, 0, 0);
+          transform: translate3d(315.625%, 0, 0);
+  -webkit-transform-origin: 365.625% 50%;
+          transform-origin: 365.625% 50%;
+}
+.cont.s_el-active .el:nth-child(4):not(.s_active) {
+  -webkit-transform: scale(0.5) translate3d(315.625%, 0, 0);
+          transform: scale(0.5) translate3d(315.625%, 0, 0);
+  opacity: 0;
+  -webkit-transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: transform 0.95s, opacity 0.95s;
+  transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s;
+}
+.el:nth-child(4) .el__inner {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+.el:nth-child(4) .el__bg {
+  -webkit-transform: translate3d(-57.6%, 0, 0);
+          transform: translate3d(-57.6%, 0, 0);
+}
+.el:nth-child(4) .el__bg:before {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+.el:nth-child(5) {
+  -webkit-transform: translate3d(420.8333333333%, 0, 0);
+          transform: translate3d(420.8333333333%, 0, 0);
+  -webkit-transform-origin: 470.8333333333% 50%;
+          transform-origin: 470.8333333333% 50%;
+}
+.cont.sel-active .el:nth-child(5):not(.s_active) {
+  -webkit-transform: scale(0.5) translate3d(420.8333333333%, 0, 0);
+          transform: scale(0.5) translate3d(420.8333333333%, 0, 0);
+  opacity: 0;
+  -webkit-transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: opacity 0.95s, -webkit-transform 0.95s;
+  transition: transform 0.95s, opacity 0.95s;
+  transition: transform 0.95s, opacity 0.95s, -webkit-transform 0.95s;
+}
+.el:nth-child(5) .el__inner {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+.el:nth-child(5) .el__bg {
+  -webkit-transform: translate3d(-76.8%, 0, 0);
+          transform: translate3d(-76.8%, 0, 0);
+}
+.el:nth-child(5) .el__bg:before {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+.el:hover .el__bg:after {
+  opacity: 0;
+}
+.el.s_active {
+  z-index: 1;
+  width: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: width 0.7s 0.7s, z-index 0s, -webkit-transform 0.6s;
+  transition: width 0.7s 0.7s, z-index 0s, -webkit-transform 0.6s;
+  transition: transform 0.6s, width 0.7s 0.7s, z-index 0s;
+  transition: transform 0.6s, width 0.7s 0.7s, z-index 0s, -webkit-transform 0.6s;
+}
+.el.s_active .el__bg {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+}
+.el.s_active .el__bg:before {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.icon-link {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  width: 32px;
+}
+.icon-link img {
+  width: 100%;
+  vertical-align: top;
+}
+.icon-link-twitter {
+  left: auto;
+  right: 5px;
+}
+
+/* 换图 */
+.el:nth-child(1) .el__bg:before {
+  background-image: url("./picture/home/国画全图/文人画/new51.jpg");
+}
+.el:nth-child(2) .el__bg:before {
+  background-image: url("./picture/home/国画全图/文人画/new52.jpg");
+}
+.el:nth-child(3) .el__bg:before {
+  background-image: url("./picture/home/国画全图/文人画/new53.jpg");
+}
+.el:nth-child(4) .el__bg:before {
+  background-image: url("./picture/home/国画全图/文人画/new54.jpg");
+}
+.el:nth-child(5) .el__bg:before {
+  background-image: url("./picture/home/国画全图/文人画/new55.jpg");
+}
+
+
+
+.e2:nth-child(1) .el__bg:before {
+  background-image: url("./picture/home/国画全图/山水画/new1.jpg");
+}
+.e2:nth-child(2) .el__bg:before {
+  background-image: url("./picture/home/国画全图/山水画/new2.jpg");
+}
+.e2:nth-child(3) .el__bg:before {
+  background-image: url("./picture/home/国画全图/山水画/new3.jpg");
+}
+.e2:nth-child(4) .el__bg:before {
+  background-image: url("./picture/home/国画全图/山水画/new4.jpg");
+}
+.e2:nth-child(5) .el__bg:before {
+  background-image: url("./picture/home/国画全图/山水画/new5.jpg");
+}
+
+
+.e3:nth-child(1) .el__bg:before {
+  background-image: url("./picture/home/国画全图/扇面画/new56.jpg");
+}
+.e3:nth-child(2) .el__bg:before {
+  background-image: url("./picture/home/国画全图/扇面画/new56.jpg");
+}
+.e3:nth-child(3) .el__bg:before {
+  background-image: url("./picture/home/国画全图/扇面画/new56.jpg");
+}
+.e3:nth-child(4) .el__bg:before {
+  background-image: url("./picture/home/国画全图/扇面画/new56.jpg");
+}
+.e3:nth-child(5) .el__bg:before {
+  background-image: url("./picture/home/国画全图/扇面画/new56.jpg");
+}
+
+
+
+
+.e4:nth-child(1) .el__bg:before {
+  background-image: url("./picture/home/国画全图/动物画/new31.jpg");
+}
+.e4:nth-child(2) .el__bg:before {
+  background-image: url("./picture/home/国画全图/动物画/new32.jpg");
+}
+.e4:nth-child(3) .el__bg:before {
+  background-image: url("./picture/home/国画全图/动物画/new33.jpg");
+}
+.e4:nth-child(4) .el__bg:before {
+  background-image: url("./picture/home/国画全图/动物画/new34.jpg");
+}
+.e4:nth-child(5) .el__bg:before {
+  background-image: url("./picture/home/国画全图/动物画/new35.jpg");
+}
+
+.e5:nth-child(1) .el__bg:before {
+  background-image: url("./picture/home/国画全图/水墨画/new11.jpg");
+}
+.e5:nth-child(2) .el__bg:before {
+  background-image: url("./picture/home/国画全图/水墨画/new12.jpg");
+}
+.e5:nth-child(3) .el__bg:before {
+  background-image: url("./picture/home/国画全图/水墨画/new13.jpg");
+}
+.e5:nth-child(4) .el__bg:before {
+  background-image: url("./picture/home/国画全图/水墨画/new14.jpg");
+}
+.e5:nth-child(5) .el__bg:before {
+  background-image: url("./picture/home/国画全图/水墨画/new15.jpg");
+}
+
+
+.e6:nth-child(1) .el__bg:before {
+  background-image: url("./picture/home/国画全图/花鸟画/new21.jpg");
+}
+.e6:nth-child(2) .el__bg:before {
+  background-image: url("./picture/home/国画全图/花鸟画/new22.jpg");
+}
+.e6:nth-child(3) .el__bg:before {
+  background-image: url("./picture/home/国画全图/花鸟画/new23.jpg");
+}
+.e6:nth-child(4) .el__bg:before {
+  background-image: url("./picture/home/国画全图/花鸟画/new24.jpg");
+}
+.e6:nth-child(5) .el__bg:before {
+  background-image: url("./picture/home/国画全图/花鸟画/new25.jpg");
+}
+
+
+.e7:nth-child(1) .el__bg:before {
+  background-image: url("./picture/home/国画全图/人物画/new41.jpg");
+}
+.e7:nth-child(2) .el__bg:before {
+  background-image: url("./picture/home/国画全图/人物画/new42.jpg");
+}
+.e7:nth-child(3) .el__bg:before {
+  background-image: url("./picture/home/国画全图/人物画/new43.jpg");
+}
+.e7:nth-child(4) .el__bg:before {
+  background-image: url("./picture/home/国画全图/人物画/new44.jpg");
+}
+.e7:nth-child(5) .el__bg:before {
+  background-image: url("./picture/home/国画全图/人物画/new45.jpg");
+}
+    	</style>
+    </head>
+    <body>
+        <div>
+            <img src="./picture/home/bg/bg0.jpg"  class="background1">
+            <!--<img src="bg2.jpg"  class="background2">-->
+        </div>
+    	<div class="top">
+            <!--<div class="wlogo">
+                <a href="http://www.baidu.com"><img src="logo.png" height="100" width="100"></a>
+            </div>-->
+            <div class="wlogo">
+            <a href="./index.html"><img src="./picture/logo/logo.png" height="200" width="200"></a>
+            </div>
+            <ul id="TopUl">
+
+                <li><a href="login.html">登录</a></li>
+                <li>|</li>
+                <li><a href="join.html">注册</a></li>
+                <li>|</li>
+                <li><a href="search.html">搜索</a></li>
+
+            </ul>
+        </div>
+    	<div class="contant">
+            <hr/>
+            <h1 id="t1">文&nbsp;人&nbsp;画</h1>
+
+            <div class="dropdown" id="dropdown1">
+
+                <div class="dropdown-content1">
+                    文人画（Literati painting），也称“士大夫写意画”、“士夫画”，古代艺术教育内容。泛指中国封建社会中文人、士大夫的绘画。别于民间和宫廷画院的绘画。始于唐代王维。作者一般回避社会现实，多取材于山水、花木，以抒发个人“性灵”，间亦寓有对民族压迫或腐朽政治的愤懑之情。标榜“士气”、“逸品”，讲求笔墨情趣，脱略形似，强调神韵，并重视书法、文学等修养及画中意境之表达。对传统美育思想及水墨、写意等技法的发展，颇有影响。近代陈衡恪认为“文人画有四个要素：人品、学问、才情和思想。具此四者，乃能完善”。
+                </div>
+                <!--<div class="dropdown-botton1">
+                  fdr
+                </div>
+                <div class="dropdown-botton2">
+                  rere
+                </div>-->
+                <div class="dropdown-img">
+                    <div class="cont s_inactive">
+  <!-- cont inner start -->
+  <div class="cont__inner">
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 1</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 2</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 3</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 4</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 5</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    </div>
+  <!-- cont inner end -->
+</div>
+                </div>
+            </div>
+            <hr/>
+            <h1 id="t2">山&nbsp;水&nbsp;画</h1>
+            <div class="dropdown" id="dropdown2">
+                <div class="dropdown-content1">
+                    山水画，简称“山水”。中国画的一种。描写山川自然景色为主体的绘画。在魏晋、南北朝已逐渐发展，但仍附属于人物画，作为背景的居多；隋唐始独立，如展子虔的设色山水，李思训的金碧山水，王维的水墨山水，王洽的泼墨山水等；五代、北宋山水画大兴，作者纷起，如荆浩、关仝、李成、董源、巨然、范宽、许道宁、燕文贵、宋迪、王诜、米芾、米友仁的水墨山水，王希孟、赵伯驹、赵伯骕的青绿山水，南北竞辉，达到高峰。从此成为中国画中的一大画科；元代山水画趋向写意，以虚带实，侧重笔墨神韵，开创新风；明清及近代，续有发展，亦出新貌。表现上讲究经营位置和表达意境。传统分法有水墨、青绿、金碧、没骨、浅绛、淡彩等形式。
+                </div>
+                <div class="dropdown-img">
+                    <div class="cont s--inactive">
+  <!-- cont inner start -->
+  <div class="cont__inner">
+    <!-- el start -->
+    <div class="el e2">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 1</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e2">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 2</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e2">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 3</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e2">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 4</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e2">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 5</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    </div>
+  <!-- cont inner end -->
+</div>
+                </div>
+            </div>
+            <hr/>
+            <h1 id="t3">扇&nbsp;面&nbsp;画</h1>
+            <div class="dropdown" id="dropdown3">
+                <div class="dropdown-content1">
+                    扇面画：中国画门类中，历代书画家喜欢在扇面上绘画或书写以抒情达意，或为他人收藏或赠友人以诗留念。存字和画的扇子，保持原样的叫成扇，为便于收藏而装裱成册页的习称扇面。从形制上分，又有圆形叫团扇（纨扇）和折叠式的叫折扇。扇面画是中国历史悠久的传统艺术品。在宋、元时代，团扇画广为流行。明代以后，折扇画渐执牛耳。扇面画中不乏超绝脱俗的传世佳作。 折扇的扇面上宽下窄，呈扇形。画家在命笔之时须考虑在特定空间范围中安排画面，精思巧构，展示技法。匠心独具，笔随意转，化有限为无限，创造出富有魅力的形象和意境。
+                </div>
+                <div class="dropdown-img">
+                    <div class="cont s--inactive">
+  <!-- cont inner start -->
+  <div class="cont__inner">
+    <!-- el start -->
+    <div class="el e3">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 1</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e3">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 2</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e3">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 3</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e3">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 4</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e3">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 5</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    </div>
+  <!-- cont inner end -->
+</div>
+                </div>
+            </div>
+            <hr/>
+            <h1 id="t4">动&nbsp;物&nbsp;画</h1>
+            <div class="dropdown" id="dropdown4">
+                <div class="dropdown-content1">
+                    动物画：在中国画中以动物形象作为艺术语言，以表达人的希望，幻想和各种感情的一种绘画，描绘的题材很广泛，凡动物均可入画，但主要对象为人们常见的家禽，家畜和动物园中的各种动物。在中国绘画里，最早的描绘题材是动物，也称走兽画。动物成为绘画的表现主题，是与原始先民主要是狩猎的生活方式息息相关，原始人在与飞禽走兽的长期接触中，使他们对动物的某些特殊机能产生了仰慕和崇敬，并幻想自己也能具有鸟兽的特异功能，甚至将自己的思想感情和喜怒哀乐都附会到它们身上，并认为人与动物可以易形；这种“万物有灵”的原始宗教观使他们把自己与飞禽走兽等动物联系起来。
+                </div>
+                <div class="dropdown-img">
+                    <div class="cont s--inactive">
+  <!-- cont inner start -->
+  <div class="cont__inner">
+    <!-- el start -->
+    <div class="el e4">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 1</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e4">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 2</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e4">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 3</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e4">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 4</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e4">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 5</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    </div>
+  <!-- cont inner end -->
+</div>
+                </div>
+            </div>
+            <hr/>
+            <h1 id="t5">水&nbsp;墨&nbsp;画</h1>
+            <div class="dropdown" id="dropdown5">
+                <div class="dropdown-content1">
+                    水墨画：由水和墨经过调配水和墨的浓度所画出的画，是绘画的一种形式，更多时候，水墨画被视为中国传统绘画，也就是国画的代表。也称国画，中国画。墨水画是中国传统画之一。墨水是国画的起源，以笔墨运用的枝法基础画成墨水画。线条中锋笔，侧锋笔，顺锋和逆锋，点染，擦，破墨，拨墨的枝法。墨于水的变化分为五色。画成作品，题款，盖章。就是完整的墨水画作品。基本的水墨画，仅有水与墨，黑与白色，但进阶的水墨画，也有工笔花鸟画，色彩缤纷。后者有时也称为彩墨画。在中国画中，以中国画特有的材料之一，墨为主要原料加以清水的多少引为浓墨、淡墨、干墨、湿墨、焦墨等，画出不同浓淡（黑、白、灰）层次。别有一番韵味称为“墨韵”。而形成水墨为主的一种绘画形式。
+                </div>
+                <div class="dropdown-img">
+                    <div class="cont s--inactive">
+  <!-- cont inner start -->
+  <div class="cont__inner">
+    <!-- el start -->
+    <div class="el e5">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 1</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e5">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 2</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e5">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 3</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e5">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 4</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e5">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 5</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    </div>
+  <!-- cont inner end -->
+</div>
+                </div>
+            </div>
+            <hr/>
+            <h1 id="t6">花&nbsp;鸟&nbsp;画</h1>
+            <div class="dropdown" id="dropdown6">
+                <div class="dropdown-content1">
+                    花鸟画，是中国画的一种，以花、鸟、虫等为描绘对象的画。在中国画中，凡以花卉、花鸟、鱼虫等为描绘对象的画，称之为花鸟画。花鸟画中的画法中有“工笔”、“写意”、“兼工带写”三种。工笔花鸟画即用浓、淡墨勾勒对象，再深浅分层次着色；写意花鸟画即用简练概括的手法绘写对象；介于工笔和写意之间的就称为兼工带写，形态逼真。中国花鸟画，是中国传统的三大画科之一。花鸟画描绘的对象，实际上不仅仅是花与鸟，而是泛指各种动植物，包括花卉、蔬果、翎毛、草虫、禽兽等类。
+                </div>
+                <div class="dropdown-img">
+                    <div class="cont s--inactive">
+  <!-- cont inner start -->
+  <div class="cont__inner">
+    <!-- el start -->
+    <div class="el e6">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 1</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e6">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 2</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e6">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 3</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e6">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 4</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e6">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 5</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    </div>
+  <!-- cont inner end -->
+</div>
+                </div>
+            </div>
+            <hr/>
+            <h1 id="t7">人&nbsp;物&nbsp;画</h1>
+            <div class="dropdown" id="dropdown7">
+                <div class="dropdown-content1">
+                    人物画,绘画的一种。以人物形象为主体的绘画之通称。中国的人物画，简称“人物”，是中国画中的一大画科，出现较山水画、花鸟画等为早；大体分为道释画、仕女画、肖像画、风俗画、历史故事画等。人物画力求人物个性刻画得逼真传神，气韵生动、形神兼备。其传神之法，常把对人物性格的表现，寓于环境、气氛、身段和动态的渲染之中。故中国画论上又称人物画为“传神”。历代著名人物画有东晋顾恺之的《洛神赋图》卷，五代南唐顾闳中的《韩熙载夜宴图》，北宋李公麟的《维摩诘像》，南宋李唐的《采薇图》等。
+                </div>
+                <div class="dropdown-img">
+                    <div class="cont s--inactive">
+  <!-- cont inner start -->
+  <div class="cont__inner">
+    <!-- el start -->
+    <div class="el e7">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 1</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e7">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 2</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e7">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 3</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e7">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 4</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el e7">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Section 5</h2>
+          </div>
+          <div class="el__content">
+
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    </div>
+  <!-- cont inner end -->
+</div>
+                </div>
+            </div>
+            <hr/>
+
+        </div>
+    	<div class="footer">
+            <ul>
+                <li><a href="index.html">民间交易坊</a></li>
+                <li>|</li>
+                <li><a href="./else/隐私政策.html">隐私政策</a></li>
+                <li>|</li>
+                <li><a href="communicate.html">画室之声</a></li>
+                <li>|</li>
+                <li><a href="./else/DC画屏.html">关于画屏</a></li>
+                <li>|</li>
+                <li><a href="./else/联系我们.html">联系我们</a></li>
+                <li>|</li>
+                <li><a href="./else/意见反馈.html">意见反馈</a></li>
+                <li>|</li>
+                <li>&copy;2019.画屏.All Rights Reserved.</li>
+                <img src="./picture/logo/wu.png" width="80" height="110" class="wu">
+                <audio src="./music/M.mp3" autoplay></audio>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            var hs=document.getElementsByTagName("h1");
+            var dropdowns=document.getElementsByClassName("dropdown");
+            var mytop=document.getElementsByClassName("top")[0];
+            var myfooter=document.getElementsByClassName("footer")[0];
+            myfooter.onclick=kongbai;
+            mytop.onclick=kongbai;
+            for(let i=0;i<hs.length;i++){
+                hs[i].onclick=function(){
+                    for(var j=0;j<dropdowns.length;j++){
+                        dropdowns[j].style.display="none";
+                        dropdowns[j].style.backgroundColor="#e2ded3";
+                        hs[j].style.backgroundColor="#e2ded3";
+                        if(  i==j  ){
+                            dropdowns[j].style.display="block";
+                            hs[j].style.backgroundColor="white";
+                            dropdowns[j].style.backgroundColor="white";
+                        }
+                    }
+
+                }
+            }
+            function kongbai(){
+                for(var j=0;j<dropdowns.length;j++){
+                    dropdowns[j].style.display="none";
+                    dropdowns[j].style.backgroundColor="#e2ded3";
+                    hs[j].style.backgroundColor="#e2ded3";
+                }
+            }
+            var bgimg=document.getElementsByClassName("background1")[0];
+            var m=0
+            setInterval(function(){
+                m++;
+                if ( m>=6 ) {
+                    m=0
+                }
+                bgimg.src="./picture/home/bg/bg"+m+".jpg";
+
+        },5000);
+            var $cont = document.querySelector('.cont');
+    var $elsArr = [].slice.call(document.querySelectorAll('.el'));
+    var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
+
+    setTimeout(function() {
+      $cont.classList.remove('s_inactive');
+    }, 200);
+
+    $elsArr.forEach(function($el) {
+      $el.addEventListener('click', function() {
+        if (this.classList.contains('s_active')) return;
+        $cont.classList.add('s_el-active');
+        this.classList.add('s_active');
+      });
+    });
+
+    $closeBtnsArr.forEach(function($btn) {
+      $btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        $cont.classList.remove('s_el-active');
+        document.querySelector('.el.s_active').classList.remove('s_active');
+      });
+    });
+
+    var db1=document.getElementsByClassName("dropdown-botton1")[0]
+    var bj1=document.getElementsByClassName(".el:nth-child(1) .el__bg:before")[0]
+    db1.onclick=function(){
+      for ( i = 1; i <= 5; i++) {
+        bj1.backgroundImage="url(ct"+i+".jpg)";
+      }
+
+    }
+        </script>
+    </body>
+</html>

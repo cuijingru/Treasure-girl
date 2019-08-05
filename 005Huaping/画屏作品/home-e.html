@@ -1,0 +1,1753 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>画屏</title>
+    	<meta charset="utf-8">
+        <link rel="short icon" type="text/css" href="./picture/logo/logo.png"/>
+    	<style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+            body{
+                /*background: url("bg.jpg") no-repeat;
+                background-attachment: fixed;
+                background-size: cover;*/
+            }
+            .background1{
+                z-index: -2;
+                position: fixed;
+                overflow:scroll; 
+                height: 100%;
+                width: 100%;
+            }
+    		.top{
+    			width: 100%;
+    			height: 600px;
+    			background-color: rgba(0,0,0,0);
+               /* background-color: #97cba9;*/
+    		}
+            .wlogo{
+                float: left;
+                margin: 390px 0px 0px 150px;
+            }
+            .top ul li{
+                float:left;
+                list-style: none;
+                font-family: "华文行楷";
+                color: white;
+                margin: 0px 5px;
+                font-size: 24px;
+            }
+            .top ul{
+                padding-top: 560px;
+                padding-left: 1000px;
+            }
+            a{
+                color: black;
+                text-decoration: none;
+            }
+            a:hover{
+                color: white;
+            }
+            .contant{
+                height: 687px;
+                width: 100%;
+                background-color: #e2ded3;
+                cursor: pointer;
+            }
+            .dropdown-content1{
+                font-family: 华文隶书;
+                font-size: 26px;
+                text-indent: 2em;
+            }
+            hr{
+                border-width: 1px;
+                border-color: white;
+            }
+            .dropdown{
+                display: none;
+                width: 100%;
+            }
+            h1{
+                font-family: "华文行楷";
+                padding: 32px 80px 30px;
+            }
+            .footer{
+    			width: 100%;
+    			height: 100px;
+    			background-color: rgba(0,0,0,0);
+    		}
+            .footer ul{
+                margin-left: 160px;
+                padding-top: 50px;
+            }
+            .footer ul li{
+                float: left;
+                font-family: "黑体";
+                font-size: 12px;
+                color: black;
+                list-style: none;
+            }
+            .footer a{
+                color: black;
+            }
+            .footer a:hover{
+                color: #D0D0D0;
+            }
+            .wu{
+              float: left;
+              margin-top: -80px;
+              margin-left: -52px;
+            }
+
+
+
+.scrollpic {
+  width: 96%;
+  margin:40px auto 0 auto;
+  padding-bottom: 50px;
+}
+#myscroll {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+#myscroll #myscrollbox {
+  display: block;
+  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1000000000000px;
+}
+#myscroll ul {
+  display: block;
+  float: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#myscroll ul li {
+  display: block;
+  float: left;
+  padding: 0;
+  width:1229px;
+}
+#myscroll ul li a {
+  display: block;
+  float: left;
+  width: 1209px;
+  padding: 0;
+  position: relative;
+  height: 500px;
+  color: #333;
+}
+#mybtns {
+  margin: 10px 0;
+  width: 1100px;
+  display: block;
+  height: 42px;
+}
+#mybtns a {
+  width: 42px;
+  height: 42px;
+  display: block;
+  float: right;
+  margin-right: 1px;
+  background-color: #c1c1c1;
+  margin-left:10px;
+}
+#mybtns a:hover {
+  background-color: #347fdc;
+}
+#mybtns a:hover, #myscroll, #mybtns a, #myscroll a:hover .intro, #myscroll a .intro, #myscroll #myscrollbox {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#mybtns #left {
+  background-image: url(jt_l.png);
+}
+#mybtns #right {
+  background-image: url(jt_r.png);
+}
+
+#kinMaxShow {
+  visibility: hidden;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+
+
+
+
+
+/*2*/
+
+#myscroll1 {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+#myscroll1 #myscrollbox1 {
+  display: block;
+  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1000000000000px;
+}
+#myscroll1 ul {
+  display: block;
+  float: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#myscroll1 ul li {
+  display: block;
+  float: left;
+  padding: 0;
+  width:1229px;;
+}
+#myscroll1 ul li a {
+  display: block;
+  float: left;
+  width: 1209px;;
+  padding: 0;
+  position: relative;
+  height: 500px;
+  color: #333;
+}
+#mybtns1 {
+  margin: 10px 0;
+  width: 1100px;
+  display: block;
+  height: 42px;
+}
+#mybtns1 a {
+  width: 42px;
+  height: 42px;
+  display: block;
+  float: right;
+  margin-right: 1px;
+  background-color: #c1c1c1;
+  margin-left:10px;
+}
+#mybtns1 a:hover {
+  background-color: #347fdc;
+}
+#mybtns1 a:hover, #myscroll1, #mybtns1 a, #myscroll1 a:hover .intro, #myscroll1 a .intro, #myscroll1 #myscrollbox1 {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#mybtns1 #left1 {
+  background-image: url(jt_l.png);
+}
+#mybtns1 #right1 {
+  background-image: url(jt_r.png);
+}
+
+#kinMaxShow1 {
+  visibility: hidden;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+
+
+
+
+/*3*/
+#myscroll2 {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+#myscroll2 #myscrollbox2 {
+  display: block;
+  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1000000000000px;
+}
+#myscroll2 ul {
+  display: block;
+  float: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#myscroll2 ul li {
+  display: block;
+  float: left;
+  padding: 0;
+  width:1229px;;
+}
+#myscroll2 ul li a {
+  display: block;
+  float: left;
+  width: 1209px;;
+  padding: 0;
+  position: relative;
+  height: 500px;
+  color: #333;
+}
+#mybtns2 {
+  margin: 10px 0;
+  width: 1100px;
+  display: block;
+  height: 42px;
+}
+#mybtns2 a {
+  width: 42px;
+  height: 42px;
+  display: block;
+  float: right;
+  margin-right: 1px;
+  background-color: #c1c1c1;
+  margin-left:10px;
+}
+#mybtns2 a:hover {
+  background-color: #347fdc;
+}
+#mybtns2 a:hover, #myscroll2, #mybtns2 a, #myscroll2 a:hover .intro, #myscroll2 a .intro, #myscroll2 #myscrollbox2 {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#mybtns2 #left2 {
+  background-image: url(jt_l.png);
+}
+#mybtns2 #right2 {
+  background-image: url(jt_r.png);
+}
+
+#kinMaxShow2 {
+  visibility: hidden;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+/*4*/
+#myscroll3 {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+#myscroll3 #myscrollbox3 {
+  display: block;
+  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1000000000000px;
+}
+#myscroll3 ul {
+  display: block;
+  float: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#myscroll3 ul li {
+  display: block;
+  float: left;
+  padding: 0;
+  width:1229px;;
+}
+#myscroll3 ul li a {
+  display: block;
+  float: left;
+  width: 1209px;;
+  padding: 0;
+  position: relative;
+  height: 500px;
+  color: #333;
+}
+#mybtns3 {
+  margin: 10px 0;
+  width: 1100px;
+  display: block;
+  height: 42px;
+}
+#mybtns3 a {
+  width: 42px;
+  height: 42px;
+  display: block;
+  float: right;
+  margin-right: 1px;
+  background-color: #c1c1c1;
+  margin-left:10px;
+}
+#mybtns3 a:hover {
+  background-color: #347fdc;
+}
+#mybtns3 a:hover, #myscroll3, #mybtns3 a, #myscroll3 a:hover .intro, #myscroll3 a .intro, #myscroll3 #myscrollbox3 {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#mybtns3 #left3 {
+  background-image: url(images/icons/jt_l.png);
+}
+#mybtns3 #right3 {
+  background-image: url(images/icons/jt_r.png);
+}
+
+#kinMaxShow3 {
+  visibility: hidden;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+
+
+
+/*5*/
+#myscroll4 {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+#myscroll4 #myscrollbox4 {
+  display: block;
+  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1000000000000px;
+}
+#myscroll4 ul {
+  display: block;
+  float: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#myscroll4 ul li {
+  display: block;
+  float: left;
+  padding: 0;
+  width:1229px;;
+}
+#myscroll4 ul li a {
+  display: block;
+  float: left;
+  width: 1209px;;
+  padding: 0;
+  position: relative;
+  height: 500px;
+  color: #333;
+}
+#mybtns4 {
+  margin: 10px 0;
+  width: 1100px;
+  display: block;
+  height: 42px;
+}
+#mybtns4 a {
+  width: 42px;
+  height: 42px;
+  display: block;
+  float: right;
+  margin-right: 1px;
+  background-color: #c1c1c1;
+  margin-left:10px;
+}
+#mybtns4 a:hover {
+  background-color: #347fdc;
+}
+#mybtns4 a:hover, #myscroll4, #mybtns4 a, #myscroll4 a:hover .intro, #myscroll4 a .intro, #myscroll4 #myscrollbox4 {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#mybtns4 #left4 {
+  background-image: url(images/icons/jt_l.png);
+}
+#mybtns4 #right4 {
+  background-image: url(images/icons/jt_r.png);
+}
+
+#kinMaxShow4 {
+  visibility: hidden;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+
+
+
+
+/*6*/
+#myscroll5 {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+#myscroll5 #myscrollbox5 {
+  display: block;
+  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1000000000000px;
+}
+#myscroll5 ul {
+  display: block;
+  float: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#myscroll5 ul li {
+  display: block;
+  float: left;
+  padding: 0;
+  width:1229px;;
+}
+#myscroll5 ul li a {
+  display: block;
+  float: left;
+  width: 1209px;;
+  padding: 0;
+  position: relative;
+  height: 500px;
+  color: #333;
+}
+#mybtns5 {
+  margin: 10px 0;
+  width: 1100px;
+  display: block;
+  height: 42px;
+}
+#mybtns5 a {
+  width: 42px;
+  height: 42px;
+  display: block;
+  float: right;
+  margin-right: 1px;
+  background-color: #c1c1c1;
+  margin-left:10px;
+}
+#mybtns5 a:hover {
+  background-color: #347fdc;
+}
+#mybtns5 a:hover, #myscroll5, #mybtns5 a, #myscroll5 a:hover .intro, #myscroll5 a .intro, #myscroll5 #myscrollbox5 {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#mybtns5 #left5 {
+  background-image: url(images/icons/jt_l.png);
+}
+#mybtns5 #right5 {
+  background-image: url(images/icons/jt_r.png);
+}
+
+#kinMaxShow5 {
+  visibility: hidden;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+
+
+
+
+/*7*/
+#myscroll6 {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+#myscroll6 #myscrollbox6 {
+  display: block;
+  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1000000000000px;
+}
+#myscroll6 ul {
+  display: block;
+  float: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#myscroll6 ul li {
+  display: block;
+  float: left;
+  padding: 0;
+  width:1229px;;
+}
+#myscroll6 ul li a {
+  display: block;
+  float: left;
+  width: 1209px;;
+  padding: 0;
+  position: relative;
+  height: 500px;
+  color: #333;
+}
+#mybtns6 {
+  margin: 10px 0;
+  width: 1100px;
+  display: block;
+  height: 42px;
+}
+#mybtns6 a {
+  width: 42px;
+  height: 42px;
+  display: block;
+  float: right;
+  margin-right: 1px;
+  background-color: #c1c1c1;
+  margin-left:10px;
+}
+#mybtns6 a:hover {
+  background-color: #347fdc;
+}
+#mybtns6 a:hover, #myscroll6, #mybtns6 a, #myscroll6 a:hover .intro, #myscroll6 a .intro, #myscroll6 #myscrollbox6 {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#mybtns6 #left6 {
+  background-image: url(images/icons/jt_l.png);
+}
+#mybtns6 #right6 {
+  background-image: url(images/icons/jt_r.png);
+}
+
+#kinMaxShow6 {
+  visibility: hidden;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    	</style>
+
+
+
+
+
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    var blw=$("#myscrollbox li").width();
+    //获取单个子元素所需宽度
+    var liArr = $("#myscrollbox ul").children("li");
+    //获取子元素数量
+    var mysw = $("#myscroll").width();
+    //获取子元素所在区域宽度
+    var mus = parseInt(mysw/blw);
+    //计算出需要显示的子元素的数量
+    var length = liArr.length-mus;
+    //计算子元素可移动次数（被隐藏的子元素数量）
+    var i=0
+    $("#right").click(function(){
+      i++
+      //点击i加1
+      if(i<length){
+          $("#myscrollbox").css("left",-(blw*i));
+        //子元素集合向左移动，距离为子元素的宽度乘以i。
+      }else{
+        i=length;
+        $("#myscrollbox").css("left",-(blw*length));
+        //超出可移动范围后点击不再移动。最后几个隐藏的元素显示时i数值固定位已经移走的子元素数量。
+        }
+      });
+    $("#left").click(function(){
+      i--
+      //点击i减1
+      if(i>=0){
+         $("#myscrollbox").css("left",-(blw*i));
+       //子元素集合向右移动，距离为子元素的宽度乘以i。
+      }else{
+       i=0;
+       $("#myscrollbox").css("left",0);
+       //超出可移动范围后点击不再移动。最前几个子元素被显示时i为0。
+        }
+      });
+});
+
+
+
+
+
+/*2*/
+
+$(document).ready(function() {
+    var blw=$("#myscrollbox1 li").width();
+    //获取单个子元素所需宽度
+    var liArr = $("#myscrollbox1 ul").children("li");
+    //获取子元素数量
+    var mysw = $("#myscroll1").width();
+    //获取子元素所在区域宽度
+    var mus = parseInt(mysw/blw);
+    //计算出需要显示的子元素的数量
+    var length = liArr.length-mus;
+    //计算子元素可移动次数（被隐藏的子元素数量）
+    var i=0
+    $("#right1").click(function(){
+      i++
+      //点击i加1
+      if(i<length){
+          $("#myscrollbox1").css("left",-(blw*i));
+        //子元素集合向左移动，距离为子元素的宽度乘以i。
+      }else{
+        i=length;
+        $("#myscrollbox1").css("left",-(blw*length));
+        //超出可移动范围后点击不再移动。最后几个隐藏的元素显示时i数值固定位已经移走的子元素数量。
+        }
+      });
+    $("#left1").click(function(){
+      i--
+      //点击i减1
+      if(i>=0){
+         $("#myscrollbox1").css("left",-(blw*i));
+       //子元素集合向右移动，距离为子元素的宽度乘以i。
+      }else{
+       i=0;
+       $("#myscrollbox1").css("left",0);
+       //超出可移动范围后点击不再移动。最前几个子元素被显示时i为0。
+        }
+      });
+});
+
+
+
+
+
+
+
+
+
+/*3*/
+$(document).ready(function() {
+    var blw=$("#myscrollbox2 li").width();
+    //获取单个子元素所需宽度
+    var liArr = $("#myscrollbox2 ul").children("li");
+    //获取子元素数量
+    var mysw = $("#myscroll2").width();
+    //获取子元素所在区域宽度
+    var mus = parseInt(mysw/blw);
+    //计算出需要显示的子元素的数量
+    var length = liArr.length-mus;
+    //计算子元素可移动次数（被隐藏的子元素数量）
+    var i=0
+    $("#right2").click(function(){
+      i++
+      //点击i加1
+      if(i<length){
+          $("#myscrollbox2").css("left",-(blw*i));
+        //子元素集合向左移动，距离为子元素的宽度乘以i。
+      }else{
+        i=length;
+        $("#myscrollbox2").css("left",-(blw*length));
+        //超出可移动范围后点击不再移动。最后几个隐藏的元素显示时i数值固定位已经移走的子元素数量。
+        }
+      });
+    $("#left2").click(function(){
+      i--
+      //点击i减1
+      if(i>=0){
+         $("#myscrollbox2").css("left",-(blw*i));
+       //子元素集合向右移动，距离为子元素的宽度乘以i。
+      }else{
+       i=0;
+       $("#myscrollbox2").css("left",0);
+       //超出可移动范围后点击不再移动。最前几个子元素被显示时i为0。
+        }
+      });
+});
+
+
+
+
+
+
+
+/*4*/
+$(document).ready(function() {
+    var blw=$("#myscrollbox3 li").width();
+    //获取单个子元素所需宽度
+    var liArr = $("#myscrollbox3 ul").children("li");
+    //获取子元素数量
+    var mysw = $("#myscroll3").width();
+    //获取子元素所在区域宽度
+    var mus = parseInt(mysw/blw);
+    //计算出需要显示的子元素的数量
+    var length = liArr.length-mus;
+    //计算子元素可移动次数（被隐藏的子元素数量）
+    var i=0
+    $("#right3").click(function(){
+      i++
+      //点击i加1
+      if(i<length){
+          $("#myscrollbox3").css("left",-(blw*i));
+        //子元素集合向左移动，距离为子元素的宽度乘以i。
+      }else{
+        i=length;
+        $("#myscrollbox3").css("left",-(blw*length));
+        //超出可移动范围后点击不再移动。最后几个隐藏的元素显示时i数值固定位已经移走的子元素数量。
+        }
+      });
+    $("#left3").click(function(){
+      i--
+      //点击i减1
+      if(i>=0){
+         $("#myscrollbox3").css("left",-(blw*i));
+       //子元素集合向右移动，距离为子元素的宽度乘以i。
+      }else{
+       i=0;
+       $("#myscrollbox3").css("left",0);
+       //超出可移动范围后点击不再移动。最前几个子元素被显示时i为0。
+        }
+      });
+});
+
+
+
+
+
+/*5*/
+$(document).ready(function() {
+    var blw=$("#myscrollbox4 li").width();
+    //获取单个子元素所需宽度
+    var liArr = $("#myscrollbox4 ul").children("li");
+    //获取子元素数量
+    var mysw = $("#myscroll4").width();
+    //获取子元素所在区域宽度
+    var mus = parseInt(mysw/blw);
+    //计算出需要显示的子元素的数量
+    var length = liArr.length-mus;
+    //计算子元素可移动次数（被隐藏的子元素数量）
+    var i=0
+    $("#right4").click(function(){
+      i++
+      //点击i加1
+      if(i<length){
+          $("#myscrollbox4").css("left",-(blw*i));
+        //子元素集合向左移动，距离为子元素的宽度乘以i。
+      }else{
+        i=length;
+        $("#myscrollbox4").css("left",-(blw*length));
+        //超出可移动范围后点击不再移动。最后几个隐藏的元素显示时i数值固定位已经移走的子元素数量。
+        }
+      });
+    $("#left4").click(function(){
+      i--
+      //点击i减1
+      if(i>=0){
+         $("#myscrollbox4").css("left",-(blw*i));
+       //子元素集合向右移动，距离为子元素的宽度乘以i。
+      }else{
+       i=0;
+       $("#myscrollbox4").css("left",0);
+       //超出可移动范围后点击不再移动。最前几个子元素被显示时i为0。
+        }
+      });
+});
+
+
+
+
+
+/*6*/
+$(document).ready(function() {
+    var blw=$("#myscrollbox5 li").width();
+    //获取单个子元素所需宽度
+    var liArr = $("#myscrollbox5 ul").children("li");
+    //获取子元素数量
+    var mysw = $("#myscroll5").width();
+    //获取子元素所在区域宽度
+    var mus = parseInt(mysw/blw);
+    //计算出需要显示的子元素的数量
+    var length = liArr.length-mus;
+    //计算子元素可移动次数（被隐藏的子元素数量）
+    var i=0
+    $("#right5").click(function(){
+      i++
+      //点击i加1
+      if(i<length){
+          $("#myscrollbox5").css("left",-(blw*i));
+        //子元素集合向左移动，距离为子元素的宽度乘以i。
+      }else{
+        i=length;
+        $("#myscrollbox5").css("left",-(blw*length));
+        //超出可移动范围后点击不再移动。最后几个隐藏的元素显示时i数值固定位已经移走的子元素数量。
+        }
+      });
+    $("#left5").click(function(){
+      i--
+      //点击i减1
+      if(i>=0){
+         $("#myscrollbox5").css("left",-(blw*i));
+       //子元素集合向右移动，距离为子元素的宽度乘以i。
+      }else{
+       i=0;
+       $("#myscrollbox5").css("left",0);
+       //超出可移动范围后点击不再移动。最前几个子元素被显示时i为0。
+        }
+      });
+});
+
+
+
+
+
+/*7*/
+$(document).ready(function() {
+    var blw=$("#myscrollbox6 li").width();
+    //获取单个子元素所需宽度
+    var liArr = $("#myscrollbox6 ul").children("li");
+    //获取子元素数量
+    var mysw = $("#myscroll6").width();
+    //获取子元素所在区域宽度
+    var mus = parseInt(mysw/blw);
+    //计算出需要显示的子元素的数量
+    var length = liArr.length-mus;
+    //计算子元素可移动次数（被隐藏的子元素数量）
+    var i=0
+    $("#right6").click(function(){
+      i++
+      //点击i加1
+      if(i<length){
+          $("#myscrollbox6").css("left",-(blw*i));
+        //子元素集合向左移动，距离为子元素的宽度乘以i。
+      }else{
+        i=length;
+        $("#myscrollbox6").css("left",-(blw*length));
+        //超出可移动范围后点击不再移动。最后几个隐藏的元素显示时i数值固定位已经移走的子元素数量。
+        }
+      });
+    $("#left6").click(function(){
+      i--
+      //点击i减1
+      if(i>=0){
+         $("#myscrollbox6").css("left",-(blw*i));
+       //子元素集合向右移动，距离为子元素的宽度乘以i。
+      }else{
+       i=0;
+       $("#myscrollbox6").css("left",0);
+       //超出可移动范围后点击不再移动。最前几个子元素被显示时i为0。
+        }
+      });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+    <body>
+        <div>
+            <img src="./picture/home/bg/bg0.jpg"  class="background1">
+            <!--<img src="bg2.jpg"  class="background2">-->
+        </div>
+    	<div class="top">
+            <!--<div class="wlogo">
+                <a href="http://www.baidu.com"><img src="logo.png" height="100" width="100"></a>
+            </div>-->
+            <div class="wlogo">
+            <a href="index.html"><img src="./picture/logo/logo.png" height="200" width="200"></a>
+            </div>
+            <ul id="TopUl">
+                
+                <li><a href="login-e.html">login</a></li>
+                <li>|</li>
+                <li><a href="join-e.html">join us</a></li>
+                <li>|</li>
+                <li><a href="search-e.html">search</a></li>
+                
+            </ul>   
+        </div>
+    	<div class="contant">
+            <hr/>
+            <h1 id="t1">Literati&nbsp;painting&nbsp;</h1>
+
+            <div class="dropdown" id="dropdown1">
+                <div class="dropdown-content1">
+                    Literati painting, also known as "the scholar-official painting", "soffor painting", the content of ancient art education. Refers to the paintings of Chinese and scholar-officials in Chinese feudal society. Unlike the paintings of folk and court paintings. Beginning in the Tang Dynasty Wang Wei. The author generally avoids social reality, and draws more from landscapes and flowers and trees to express his own "sexual spirit", and also contains resentment against national oppression or decadent politics. It is advertised as "morality" and "yipin", which emphasizes the taste of pen and ink, deviates from the shape, emphasizes the charm, and attaches importance to the cultivation of calligraphy and literature and the expression of artistic conception in painting. It has an impact on the development of traditional aesthetic education and the development of techniques such as ink painting and freehand brushwork. In modern times, Chen Hengyi believed that "literature painting has four elements: character, learning, talent and thought. With these four, it can be perfected."
+
+                </div>
+                <div class="dropdown-img">
+                   
+
+
+
+
+
+
+<div class="scrollpic">
+  <div id="mybtns"> <a href="javascript:;" id="right"></a><a href="javascript:;" id="left"></a>  </div>
+  <div id="myscroll">
+    <div id="myscrollbox">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/文人画/new51.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/文人画/new52.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/文人画/new53.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/文人画/new54.jpg" width="1209" height="500">
+           
+             
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/文人画/new55.jpg" width="1209" height="500">
+            
+              
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/文人画/new51.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/文人画/new52.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/文人画/new5.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+            <hr/>
+            <h1 id="t3">Landscape&nbsp;painting&nbsp;</h1>
+            <div class="dropdown" id="dropdown1">
+                <div class="dropdown-content1">
+                    Landscape painting, referred to as "landscape". A kind of Chinese painting. A painting depicting the natural scenery of the mountains and rivers. In the Wei and Jin Dynasties, the Southern and Northern Dynasties have gradually developed, but they are still attached to the figure paintings. They are mostly backgrounds; the Sui and Tang Dynasties began to be independent, such as the color of the landscape of the exhibition, the Jinbi landscape of Li Sixun, the ink and wash of Wang Wei, and the splash of Wang Qia. Landscapes, etc.; the five generations, the Northern Song Dynasty landscape paintings, the authors, such as Jing Hao, Guan Tong, Li Cheng, Dong Yuan, Ju Ran, Fan Kuan, Xu Daoning, Yan Wengui, Song Di, Wang Wei, Mi Fu, Mi Youren Landscapes, Wang Ximeng, Zhao Bozhen, Zhao Bojun's green mountains and rivers, north and south Jinghui, reached the peak. Since then, it has become a large painting in Chinese painting; the landscape paintings of the Yuan Dynasty tend to be freehand, with a virtual reality, focusing on the pen and ink, and opening up new styles; the Ming and Qing Dynasties and the modern times have continued to develop and have a new look. Performance is to pay attention to business location and expression of artistic conception. The traditional method has the form of ink, green, gold, no bone, light enamel, light color and so on.
+
+                </div>
+                <div class="dropdown-img">
+
+
+
+<div class="scrollpic">
+  <div id="mybtns1"> <a href="javascript:;" id="right1"></a><a href="javascript:;" id="left1"></a>  </div>
+  <div id="myscroll1">
+    <div id="myscrollbox1">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/山水画/new1.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/山水画/new2.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/山水画/new3.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/山水画/new4.jpg" width="1209" height="500">
+            <span class="intro">
+             
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/山水画/new5.jpg" width="1209" height="500">
+            <span class="intro">
+              
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/山水画/new6.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/山水画/new7.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/山水画/new8.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/山水画/new9.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/山水画/new10.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+                   
+
+                </div>
+            </div>
+            <hr/>
+            <h1 id="t4">Fan&nbsp;painting&nbsp;</h1>
+            <div class="dropdown" id="dropdown1">
+                <div class="dropdown-content1">
+                   Fan painting: In the Chinese painting category, the painter of the past generations likes to paint or write on the fan surface to express their feelings, or to collect or give gifts to others for poetry. The fan that saves the word and the picture is called a fan, and the fan of the book is made into a book for the convenience of collection. From the shape of the division, there is a circular called a fan (fan fan) and a folding type called a folding fan. Fan painting is a traditional Chinese art with a long history. In the Song and Yuan eras, group fan paintings were widely popular. After the Ming Dynasty, the fan paintings gradually became obsessive. There is no shortage of masterpieces in the fan painting. The fan surface of the folding fan is narrow and narrow, and is fan-shaped. At the time of the life of the painter, the painter must consider arranging the pictures in a specific spatial range, thinking and constructing techniques. Ingenuity is unique, the pen is free to turn, and the limit is unlimited, creating a glamorous image and mood.
+
+                </div>
+                <div class="dropdown-img">
+                    
+
+
+
+
+
+<div class="scrollpic">
+  <div id="mybtns2"> <a href="javascript:;" id="right2"></a><a href="javascript:;" id="left2"></a>  </div>
+  <div id="myscroll2">
+    <div id="myscrollbox2">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/扇面画/new56.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/扇面画/new57.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/扇面画/new56.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/扇面画/new57.jpg" width="1209" height="500">
+            <span class="intro">
+             
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/扇面画/new56.jpg" width="1209" height="500">
+            <span class="intro">
+              
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/扇面画/new57.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/扇面画/new56.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/扇面画/new57.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+                </div>
+            </div>
+            <hr/>
+            <h1 id="t5">Animal&nbsp;painting&nbsp;</h1>
+            <div class="dropdown" id="dropdown1">
+                <div class="dropdown-content1">
+                  Animal painting: In Chinese painting, animal image is used as artistic language to express people's hopes, fantasy and various kinds of feelings. The subject matter is very wide. All animals can enter the painting, but the main objects are common poultry. Various animals in livestock and zoos. In Chinese painting, the earliest depiction of the subject is the animal, also known as the beast painting. Animals have become the subject of painting, and they are closely related to the primitive ancestors' main huntering lifestyle. The primitive people have long-term contact with the birds and animals, which makes them admire and reverence for certain special functions of animals, and fantasize that they also It can have the special functions of birds and beasts, and even attach their own thoughts, feelings, emotions, sorrows and sorrows to them, and think that people and animals can be easily shaped; this "everything is spiritual" primitive religious view makes them and themselves Animals such as beasts are linked.
+
+                </div>
+                <div class="dropdown-img">
+                   
+
+
+
+
+
+<div class="scrollpic">
+  <div id="mybtns3"> <a href="javascript:;" id="right3"></a><a href="javascript:;" id="left3"></a>  </div>
+  <div id="myscroll3">
+    <div id="myscrollbox3">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/动物画/new31.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/动物画/new32.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/动物画/new33.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/动物画/new34.jpg" width="1209" height="500">
+            <span class="intro">
+             
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/动物画/new35.jpg" width="1209" height="500">
+            <span class="intro">
+              
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/动物画/new36.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/动物画/new37.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/动物画/new38.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/动物画/new39.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/动物画/new40.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+                </div>
+            </div>
+            <hr/>
+            <h1 id="t6">Ink&nbsp;painting&nbsp;</h1>
+            <div class="dropdown" id="dropdown1">
+                <div class="dropdown-content1">
+                 Ink painting: The painting drawn by the concentration of water and ink through the blending of water and ink is a form of painting. More often, ink painting is regarded as the representative of Chinese traditional painting, that is, Chinese painting. Also known as Chinese painting, Chinese painting. Ink painting is one of the traditional Chinese paintings. Ink is the origin of Chinese painting, and is painted in ink based on the basis of the brush and ink. Line center pen, side-end pen, Shun Feng and counter-front, point dye, rub, break ink, and stick the ink. The change of ink in water is divided into five colors. Painted into works, titled, stamped. It is a complete ink painting. The basic ink paintings are only water and ink, black and white, but advanced ink paintings, as well as meticulous flowers and birds, are colorful. The latter is sometimes called color ink painting. In Chinese painting, one of the unique materials of Chinese painting, ink as the main raw material, the amount of water is cited as thick ink, light ink, dry ink, wet ink, coke ink, etc., draw different shades (black, white, gray) level . Don't have a charm called "Ink Rhyme". And a form of painting based on ink and wash.
+
+                </div>
+                <div class="dropdown-img">
+                   
+
+
+
+<div class="scrollpic">
+  <div id="mybtns4"> <a href="javascript:;" id="right4"></a><a href="javascript:;" id="left4"></a>  </div>
+  <div id="myscroll4">
+    <div id="myscrollbox4">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/水墨画/new11.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/水墨画/new12.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/水墨画/new13.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/水墨画/new14.jpg" width="1209" height="500">
+            <span class="intro">
+             
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/水墨画/new15.jpg" width="1209" height="500">
+            <span class="intro">
+              
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/水墨画/new16.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/水墨画/new17.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/水墨画/new18.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/水墨画/new19.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/水墨画/new20.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+                </div>
+            </div>
+            <hr/>
+            <h1 id="t7">Flower&nbsp;and&nbsp;bird&nbsp;painting</h1>
+            <div class="dropdown" id="dropdown1">
+                <div class="dropdown-content1">
+                  Flower and bird paintings are paintings of Chinese paintings, which are painted with flowers, birds, and insects. In Chinese painting, paintings depicting flowers, flowers, birds, and fish worms are called flower and bird paintings. There are three kinds of paintings in the flower and bird paintings: "gongbi", "freehand", and "working with writing". The meticulous flower and bird paintings use thick and light ink to outline the objects, and then shade the layers in depth; the freehand flower and bird paintings use simple and general methods to draw the objects; between the meticulous and freehand, it is called the work and writing, and the form is realistic. Chinese flower and bird paintings are one of the three major painting disciplines in China. The objects depicted by flowers and birds are actually not just flowers and birds, but all kinds of animals and plants, including flowers, fruits and vegetables, manes, grass worms, animals and so on.
+
+                </div>
+                <div class="dropdown-img">
+                   
+
+
+<div class="scrollpic">
+  <div id="mybtns5"> <a href="javascript:;" id="right5"></a><a href="javascript:;" id="left5"></a>  </div>
+  <div id="myscroll5">
+    <div id="myscrollbox5">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/花鸟画/new21.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/花鸟画/new22.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/花鸟画/new23.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/花鸟画/new24.jpg" width="1209" height="500">
+            <span class="intro">
+             
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/花鸟画/new25.jpg" width="1209" height="500">
+            <span class="intro">
+              
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/花鸟画/new26.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/花鸟画/new27.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/花鸟画/new28.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/花鸟画/new29.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/花鸟画/new30.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+                </div>
+            </div>
+            <hr/>
+            <h1 id="t8">A&nbsp;kind&nbsp;of&nbsp;painting</h1>
+            <div class="dropdown" id="dropdown1">
+                <div class="dropdown-content1">
+                  a kind of painting. The general name of painting with the character image as the main body. Chinese figure painting, referred to as "character", is a large painting in Chinese painting. It appears earlier than landscape painting, flower and bird painting; it is roughly divided into Taoist paintings, ladies paintings, portraits, genre paintings, historical story paintings, etc. The figure painting strives to make the characters' personalities vivid and vivid, with vivid charm and both form and spirit. Its expressive method often expresses the character's character in the environment, atmosphere, body and dynamic rendering. Therefore, in Chinese painting theory, the figure painting is also called "Expression." The famous figures of the past generations include the "Luo Shen Fu Tu" volume of the Eastern Jin Dynasty Gu Yuzhi, the "Han Xi Zai Night Banquet" of the Five Dynasties of the Southern Tang Dynasty, the "Vimal Image" of the Northern Song Dynasty, and the "Pu Wei Tu" of the Southern Song Dynasty.
+
+                </div>
+                <div class="dropdown-img">
+                   
+
+
+
+
+
+<div class="scrollpic">
+  <div id="mybtns6"> <a href="javascript:;" id="right6"></a><a href="javascript:;" id="left6"></a>  </div>
+  <div id="myscroll6">
+    <div id="myscrollbox6">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/人物画/new41.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/人物画/new42.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/人物画/new43.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/人物画/new44.jpg" width="1209" height="500">
+            <span class="intro">
+             
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/人物画/new45.jpg" width="1209" height="500">
+            <span class="intro">
+              
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/人物画/new46.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/人物画/new47.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/人物画/new48.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/人物画/new49.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./picture/home/国画全图/人物画/new50.jpg" width="1209" height="500">
+            
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+            <hr/>
+           
+  
+
+
+
+
+
+
+            
+    	<div class="footer">
+            <ul>
+                <li><a href="./else/else-e/服务条例-e.html">Services ordinance</a></li>
+                <li>|</li>
+                <li><a href="./else/else-e/隐私政策-e.html">Privacy policy</a></li>
+                <li>|</li>
+                <li><a href="./else/else-e/关于我们-e.html">Communication community</a></li>
+                <li>|</li>
+                <li><a href="./else/else-e/DC画屏-e.html">About Painted Screen</a></li>
+                <li>|</li>
+                <li><a href="./else/else-e/联系我们-e.html">Contact us</a></li>
+                <li>|</li>
+                <li><a href="./else/else-e/意见反馈-e.html">Feedback</a></li>
+                <li>&copy;2019.Painted Screen.All Rights Reserved.</li>
+                <img src="./picture/logo/wu.png" width="80" height="110" class="wu">
+                <audio src="./music/M.mp3" autoplay></audio>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            var hs=document.getElementsByTagName("h1");
+            var dropdowns=document.getElementsByClassName("dropdown");
+            var mytop=document.getElementsByClassName("top")[0];
+            var myfooter=document.getElementsByClassName("footer")[0];
+            myfooter.onclick=kongbai;
+            mytop.onclick=kongbai;
+            for(let i=0;i<hs.length;i++){
+                hs[i].onclick=function(){
+                    for(var j=0;j<dropdowns.length;j++){
+                        dropdowns[j].style.display="none";
+                        dropdowns[j].style.backgroundColor="#e2ded3";
+                        hs[j].style.backgroundColor="#e2ded3";
+                        if(  i==j  ){
+                            dropdowns[j].style.display="block";
+                            hs[j].style.backgroundColor="white";
+                            dropdowns[j].style.backgroundColor="white";
+                        }
+                    }
+
+                }
+            }
+            function kongbai(){
+                for(var j=0;j<dropdowns.length;j++){
+                    dropdowns[j].style.display="none";
+                    dropdowns[j].style.backgroundColor="#e2ded3";
+                    hs[j].style.backgroundColor="#e2ded3";
+                }
+            }
+            var bgimg=document.getElementsByClassName("background1")[0];
+            var m=0
+            setInterval(function(){
+                m++;
+                if ( m>=6 ) {
+                    m=0
+                }
+                bgimg.src="./picture/home/bg/bg"+m+".jpg";
+            
+        },5000);
+          
+        </script>
+    </body>
+</html>
+
+
+
+

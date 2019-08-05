@@ -1,0 +1,312 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: #fffde1;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: #c1c1c1;
+}
+p{
+    font-family: "楷体";
+}
+.shop-top{
+    width: 100%;
+    height: 200px;
+    background-color: #fffde1;
+    color: black;
+}
+.image-top{
+    width: 80%;
+    height: 200px;
+    margin-left: 10%;
+}
+.image-right{
+    float: right;
+    width: 10%;
+    height: 200px;
+    position: relative;
+    top: -180px;
+}
+.logo{
+    width: 20%;
+    height: 85%;
+    float: left;
+    margin-top: 3%;
+}
+.logo-top{
+    height: 70%;
+    width: 100%;
+}
+.logo-bottom{
+    height: 30%;
+    width: 100%;
+    float: left;
+}
+.nav{
+    height: 85%;
+    width: 80%;
+    float: right;
+    margin-top: 3%;
+}
+.nav-top1{
+    height: 70%;
+    width: 100%;
+    float: right;
+}
+.nav-top1-1{
+    float: left;
+    width: 24.5%;
+    margin-left: 2%;
+}
+.nav-top1-2{
+    float: left;
+    width: 24.5%;
+}
+.nav-top1-3{
+    float: left;
+    width: 24.5%;
+}
+.nav-top1-4{
+    float: left;
+    width: 24.5%;
+}
+.nav p{
+    text-indent: 2em;
+}
+.nav-top1 li{
+    font-family: "mfont";
+    font-size: 36px;
+    float: left;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 7%;
+
+    margin-top: 7px;
+}
+.nav-top2{
+    height: 30%;
+    width: 100%;
+    float: right;
+    position: relative;
+}
+@font-face{
+    font-family: mfont;
+    src: url('../../font/字魂49号-逍遥行书.ttf');
+}
+@font-face{
+    font-family: afont;
+    src: url('../../font/字魂25号-凌云体.ttf');
+}
+@font-face{
+    font-family: bfont;
+    src: url('../../font/字魂32号-汪子义星座体.ttf');
+}
+@font-face{
+    font-family: cfont;
+    src: url('../../font/字魂24号-镇魂手书.ttf');
+}
+
+@font-face{
+    font-family: dfont;
+    src: url('../../font/字魂10号-歌以晓手迹行楷体.ttf');
+}
+.nav-top2-1 li{
+    font-family: "dfont";
+    font-size: 27px;
+    float: left;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    line-height: 27px;
+    margin-top: 18px;
+}
+.nav-top2-1 li a:hover{
+    color: white;
+    background: url(../../picture/shop/nav.png) no-repeat 0px -27px;
+
+}
+hr{
+    width: 80%;
+    margin-left: 10%; 
+    margin-bottom: 20px;
+}
+.content-top{
+    width: 80%;
+    margin-left: 5.2%;
+    height: 63px;
+}
+.content-bottom{
+    width: 80%;
+    margin-left: 5.2%;
+    height: 63px;
+}
+.content{
+    width: 80%;
+    height: 1200px;
+    margin-left: 10%;
+    background-color: #f4f2ef;
+}
+.content-1{
+    width: 47.85%;
+    height:200px;
+    float: left;
+    margin: 20px 1% 20px 1%;
+    background-color: #f4f2ef;
+}
+.content-1 p{
+    background-color: #f4f2ef;
+}
+.content-1-1{
+    width: 70%;
+    height: 200px;
+    float: left;
+    background-color: #f4f2ef;
+}
+.content-1-2{
+    width: 30%;
+    height: 200px;
+    float: right;
+    background-color: #f4f2ef;
+}
+.content-1-2-top{
+    width: 98%;
+    height: 51.5%;
+    padding: 2% 1% 2% 1%;
+    text-indent: 10px;
+    font-size: 20px;
+    background-color: #f4f2ef;
+}
+.content-1-2-bottom{
+    width: 98%;
+    height: 41.5%;
+    padding: 2% 1% 2% 1%;
+    text-indent: 10px;
+    background-color: #f4f2ef;
+}
+.button{
+    height: 36px;
+    display: inline-block;
+    width: 85%;
+    background-color: #7d7d7d;
+    color: white;
+    font-size: 24px;
+    font-family: afont;
+    margin: 4px 0px 3px 0px;
+    border-radius: 6px;
+    transition: all 0.5s;
+    cursor: pointer;
+    border: 2px solid #7d7d7d;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+}
+.button:after {
+    content: "";
+    background: #c5c5c5;
+    display: block;
+    position: absolute;
+    padding-top: 3.5%;
+    padding-left: 10%;
+    margin-left: -1px!important;
+    margin-top: -3%;
+    opacity: 0;
+    transition: all 0.8s
+}
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+.button span {
+    cursor: pointer;
+    background-color: #7d7d7d;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.hr2{
+    margin-bottom: 20px;
+    border: 0.5px dashed black;
+}
+.footer{
+    width: 100%;
+    height: 150px;
+    background: url(../../picture/shop/footer.png);
+}
+.footer-all{
+    height: 100%;
+    padding-left:10%;
+    padding-right: 10%; 
+    background: url(../../picture/shop/footer.png);
+}
+.footer-left{
+    width: 50%;
+    height: 100%;
+    float: left;
+    background: url(../../picture/shop/footer2.png);
+}
+.footer-left-1{
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align:center;
+    background: url(../../picture/shop/footer2.png);
+}
+.footer-left-1 li{
+    list-style: none;
+}
+.footer-left-2{
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align:center;
+    background: url(../../picture/shop/footer2.png) -257.1px;
+}
+.footer-right{
+    width: 50%;
+    height: 100%;
+    float: right;
+    text-align:center;
+}
+.footer-right-1{
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align:center;
+    background: url(../../picture/shop/footer2.png) -514.2px;
+}
+.footer-right-2{
+    width: 50%;
+    height: 100%;
+    float: left;
+    background: url(../../picture/shop/footer2.png) -771.3px;
+}
+.wu{
+    float: left;
+    margin-top: -80px;
+}

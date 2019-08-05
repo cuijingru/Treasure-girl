@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>淡烟流水画屏幽</title>
+	<meta charset="utf-8">
+	<link rel="short icon" type="text/css" href="./picture/logo/logo.png"/>
+	<style type="text/css">
+		*{
+	padding: 0;
+	margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+
+	/*background-image: url();更换图片或者颜色*/
+	/*background: #aed09e;*/
+	background: url(./picture/index/bg6.jpg) no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+
+
+
+
+
+#box1{
+		width: 100%;
+		height: 100%;
+		position: relative;
+		animation: run1 8s;
+	}
+	
+	@keyframes run1{
+				from{
+			opacity: 0;
+		}
+				to{
+			opacity: 1;
+		}
+			}
+	
+	#box1 img.sc1{
+		width: 15%;
+		position: absolute;
+		top: 60%;
+		left: 60%;
+		
+		animation: run2 50s linear infinite 6s;
+	}
+	@keyframes run2{
+				from{
+			left:60%;
+		}
+				to{
+			left: 25%
+		}
+			}
+	#box1 img.sc2{
+		width: 12%;
+		position: absolute;
+		top: 20%;
+		left: 70%;
+		animation: run3 20s linear infinite 4s;
+	}
+	@keyframes run3{
+				0%{
+			width: 12%;
+		}
+				50%{
+			width: 15%;
+		}
+		100%{
+			12%
+		}
+			}
+	
+
+
+
+
+
+
+
+
+.bounce{
+	margin: 200px auto 50px;
+	width: 80px;
+}
+.bounce .bounce-child{
+	width: 20px;
+	height: 20px;
+
+	/*更换圆点颜色*/
+	background: #ffd3b5;
+	border-radius: 100%;
+	display: inline-block;
+	animation: bounce 1.5s ease-in-out 0s infinite both;
+}
+.bounce .bounce2{
+	animation-delay: 0.16s;
+}
+.bounce .bounce3{
+	animation-delay: 0.32s;
+}
+@keyframes bounce {
+	0%, 80%, 100%{
+		transform: scale(0);
+	}
+	40% {
+		transform: scale(1);
+	}
+}
+a{
+	text-decoration: none;
+}
+
+.text{
+	font-size: 60px;
+	color: #333;
+	font-family: 华文行楷
+}
+.text span{
+	position:relative;
+	z-index: 1;
+}
+.text span::before{
+	content: attr(date-text);
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+
+	/*更换字的颜色*/
+	color: #333;
+	animation-delay: 0;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+.text .letter:nth-child(2)::before{
+	animation-delay: 0.3s;
+}
+/*
+.text .letter:nth-child(3)::before{
+	animation-delay: 0.45s;
+}
+.text .letter:nth-child(4)::before{
+	animation-delay: 0.6s;
+}
+.text .letter:nth-child(5)::before{
+	animation-delay: 0.75s;
+}
+.text .letter:nth-child(6)::before{
+	animation-delay: 0.9s;
+}
+.text .letter:nth-child(7)::before{
+	animation-delay: 1.05s;
+}*/
+
+.text .letter::before{
+	animation-name: change;
+}
+@keyframes change{
+
+	0%,100%{
+		transform: rotateY(-90deg);
+		opacity: 0;
+	}
+
+	20%,50%{
+		transform: rotateY(0);
+		opacity: 1;
+	}
+
+	65%{
+		transform: rotateY(0);
+		opacity: .3;
+	}
+
+	80%{
+		opacity: 0;
+	}
+
+}
+
+
+
+.box{
+	        margin-top: -100px;
+			width: 500px;
+			height: 100px;
+			margin: 0px auto;
+			font-size: 22px;
+			line-height: 30px;
+			font-family: 华文行楷;
+			float:right;
+			z-index: 4;
+			top: 0;
+		}
+		.typed-cursor{
+			opacity: 1;
+			animation: typedjsBlink 0.7s infinite;
+			-webkit-animation: typedjsBlink 0.7s infinite;
+			animation: typedjsBlink 0.7s infinite;
+		}    
+		
+		@keyframes typedjsBlink{
+			50% { opacity: 0.0; }
+		}
+	
+		@-webkit-keyframes typedjsBlink{
+			0% { opacity: 1; }
+			50% { opacity: 0.0; }
+			100% { opacity: 1; }
+		};
+
+
+
+
+
+#star{
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			left: 0;
+			top: 0;
+		}
+		#star span{
+			position: absolute;
+			border-radius: 50%;
+			transition: 100s linear;
+			opacity: 0.7;
+
+
+
+
+
+
+	</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+</head>
+<body>
+
+
+<div id="star"></div>
+
+
+
+
+
+<div id="box1">
+
+	<img src="./picture/index/1s.png" class="sc1">
+	<img src="./picture/index/2s.png" class="sc2">
+</div>
+
+
+
+
+
+	<div class="bounce">
+		
+	</div>
+	<div class="text" >
+		<!--<a href="./home.html"><span class="letter" date-text="三">三</span></a>
+		<a href="./home.html"><span class="letter" date-text="&nbsp;">&nbsp;</span></a>
+		<a href="./home.html"><span class="letter" date-text="希">希</span></a>
+		<a href="./home.html"><span class="letter" date-text="&nbsp;">&nbsp;</span></a>-->
+		<a href="./home.html"><span class="letter" date-text="画">画</span></a>
+		<a href="./home.html"><span class="letter" date-text="&nbsp;">&nbsp;</span></a>
+		<a href="./home.html"><span class="letter" date-text="屏">屏</span></a>
+		<br>
+		<a href="./home-e.html"><span class="letter" date-text="P">P</span></a>
+		<!--<a href="./home-e.html"><span class="letter" date-text="&nbsp;">&nbsp;</span></a>-->
+		<a href="./home-e.html"><span class="letter" date-text="a">a</span></a>
+		<!--<a href="./home-e.html"><span class="letter" date-text="&nbsp;">&nbsp;</span></a>-->
+		<a href="./home-e.html"><span class="letter" date-text="i">i</span></a>
+		<!--<a href="./home-e.html"><span class="letter" date-text="&nbsp;">&nbsp;</span></a>-->
+		<a href="./home-e.html"><span class="letter" date-text="n">n</span></a>
+		<!--<a href="./home-e.html"><span class="letter" date-text="&nbsp;">&nbsp;</span></a>-->
+		<a href="./home-e.html"><span class="letter" date-text="t">t</span></a>
+		<!--<a href="./home-e.html"><span class="letter" date-text="&nbsp;">&nbsp;</span></a>-->
+		<a href="./home-e.html"><span class="letter" date-text="e">e</span></a>
+		<!--<a href="./home-e.html"><span class="letter" date-text="&nbsp;">&nbsp;</span></a>-->
+		<a href="./home-e.html"><span class="letter" date-text="d">d</span></a>
+		<a href="./home-e.html"><span class="letter" date-text="&nbsp;">&nbsp;</span></a>
+		<a href="./home-e.html"><span class="letter" date-text="S">S</span></a>
+		<a href="./home-e.html"><span class="letter" date-text="c">c</span></a>
+		<a href="./home-e.html"><span class="letter" date-text="r">r</span></a>
+		<a href="./home-e.html"><span class="letter" date-text="e">e</span></a>
+		<a href="./home-e.html"><span class="letter" date-text="e">e</span></a>
+		<a href="./home-e.html"><span class="letter" date-text="n">n</span></a>
+		
+
+		
+
+
+
+	</div>
+	<div class="box">
+		<span id="txt"></span>
+	</div>
+	<audio src="./music/C.mp3" autoplay></audio>
+
+
+
+		<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/typed.js"></script>
+<script>
+	/*
+	var typed1 = new Typed('#txt', {
+		    stringsElement: '#typed-txt',
+		    typeSpeed: 60,
+		    backSpeed: 10,
+		    loop: false
+		  });
+		  */
+
+		  var typed = new Typed('#txt', {
+		  strings: ["淡  <br>  烟^2000  <br>  流  <br>  水^2000  <br>  画  <br>  屏  <br>  幽"],
+		  typeSpeed: 60, //打字速度，值越大速度越慢；
+		  backSpeed: 10, //回退删除速度；
+		  loop: false,  //是否循环打字；
+		  cursorChar: '|', //光标的样式；
+		  smartBackspace: true //只能打印，如果字符一样的情况下不再打印
+		});
+
+
+
+
+
+
+
+var cols = ['#f5d76e','#f7ca18','#f4d03f','#ececec','#ecf0f1','#a2ded0'];
+		var stars = 400;
+
+		for (var i = 0; i <= stars; i++) {
+
+			var size = Math.random()*3;
+		  	var color = cols[parseInt(Math.random()*4)];
+
+			$('#star').prepend('<span style=" width: ' + size + 'px; height: ' + size + 'px; top: ' + Math.random()*100 + '%; left: ' + Math.random()*100 + '%; background: ' + color + '; box-shadow: 0 0 '+ Math.random()*10 +'px' + color + ';"></span>') ;
+		};
+
+		setTimeout(function(){ 
+			$('#star span').each(function(){  
+		 		$(this).css('top', Math.random()*100 + '%').css('left', Math.random()*100 + '%'); 
+		  });
+		}, 1);
+
+		setInterval(function(){ 
+			$('#star span').each(function(){  	
+		 		$(this).css('top', Math.random()*100 + '%').css('left', Math.random()*100 + '%'); 
+		  });
+		}, 100000); 
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
