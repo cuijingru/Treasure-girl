@@ -5,6 +5,11 @@
 	<meta charset="utf-8">
 	<link rel="short icon" type="text/css" href="./picture/logo/logo.png"/>
 	<style type="text/css">
+		html{
+		height: 100%;
+			width: 100%;
+		}
+
 		*{
 	padding: 0;
 	margin: 0;
@@ -43,7 +48,7 @@ body{
 		position: relative;
 		animation: run1 8s;
 	}
-	
+
 	@keyframes run1{
 				from{
 			opacity: 0;
@@ -52,13 +57,13 @@ body{
 			opacity: 1;
 		}
 			}
-	
+
 	#box1 img.sc1{
 		width: 15%;
 		position: absolute;
 		top: 60%;
 		left: 60%;
-		
+
 		animation: run2 50s linear infinite 6s;
 	}
 	@keyframes run2{
@@ -84,10 +89,10 @@ body{
 			width: 15%;
 		}
 		100%{
-			12%
+			width: 12%;
 		}
 			}
-	
+
 
 
 
@@ -146,7 +151,7 @@ a{
 
 	/*更换字的颜色*/
 	color: #333;
-	animation-delay: 0;
+	animation-delay: 0s;
 	animation-duration: 3s;
 	animation-iteration-count: infinite;
 }
@@ -215,17 +220,17 @@ a{
 			animation: typedjsBlink 0.7s infinite;
 			-webkit-animation: typedjsBlink 0.7s infinite;
 			animation: typedjsBlink 0.7s infinite;
-		}    
-		
+		}
+
 		@keyframes typedjsBlink{
 			50% { opacity: 0.0; }
 		}
-	
+
 		@-webkit-keyframes typedjsBlink{
 			0% { opacity: 1; }
 			50% { opacity: 0.0; }
 			100% { opacity: 1; }
-		};
+		}
 
 
 
@@ -238,12 +243,12 @@ a{
 			left: 0;
 			top: 0;
 		}
-		#star span{
+		#star span {
 			position: absolute;
 			border-radius: 50%;
 			transition: 100s linear;
 			opacity: 0.7;
-
+		}
 
 
 
@@ -267,7 +272,7 @@ a{
 
 
 
-	
+
 
 </head>
 <body>
@@ -290,7 +295,7 @@ a{
 
 
 	<div class="bounce">
-		
+
 	</div>
 	<div class="text" >
 		<!--<a href="./home.html"><span class="letter" date-text="三">三</span></a>
@@ -321,9 +326,9 @@ a{
 		<a href="./home-e.html"><span class="letter" date-text="e">e</span></a>
 		<a href="./home-e.html"><span class="letter" date-text="e">e</span></a>
 		<a href="./home-e.html"><span class="letter" date-text="n">n</span></a>
-		
 
-		
+
+
 
 
 
@@ -373,17 +378,17 @@ var cols = ['#f5d76e','#f7ca18','#f4d03f','#ececec','#ecf0f1','#a2ded0'];
 			$('#star').prepend('<span style=" width: ' + size + 'px; height: ' + size + 'px; top: ' + Math.random()*100 + '%; left: ' + Math.random()*100 + '%; background: ' + color + '; box-shadow: 0 0 '+ Math.random()*10 +'px' + color + ';"></span>') ;
 		};
 
-		setTimeout(function(){ 
-			$('#star span').each(function(){  
-		 		$(this).css('top', Math.random()*100 + '%').css('left', Math.random()*100 + '%'); 
+		setTimeout(function(){
+			$('#star span').each(function(){
+		 		$(this).css('top', Math.random()*100 + '%').css('left', Math.random()*100 + '%');
 		  });
 		}, 1);
 
-		setInterval(function(){ 
-			$('#star span').each(function(){  	
-		 		$(this).css('top', Math.random()*100 + '%').css('left', Math.random()*100 + '%'); 
+		setInterval(function(){
+			$('#star span').each(function(){
+		 		$(this).css('top', Math.random()*100 + '%').css('left', Math.random()*100 + '%');
 		  });
-		}, 100000); 
+		}, 100000);
 
 
 
