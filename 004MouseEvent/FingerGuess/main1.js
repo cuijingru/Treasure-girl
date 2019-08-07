@@ -1,4 +1,4 @@
-var r,score=3,grade=1,LastHumanChoice,humanChoice;
+var r,score=0,grade=1,LastHumanChoice,humanChoice;
 var LastWinner="no one",LastComputerChoice="rock";
 function rock() {
     document.getElementById("myChoice").innerHTML="<img src=\"images/rock.png\"/>";
@@ -88,7 +88,7 @@ function judge(myChoice) {
         }
 
     }
-    if (score>=5) {
+    if (score>=3) {
         score=0;
         grade+=1;
     }
