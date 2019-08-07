@@ -94,7 +94,7 @@ function judge(myChoice) {
     }
     document.getElementById("result").innerHTML="第"+grade+"关，积分："+score;
     if (grade>7) {
-        document.getElementById("result").innerHTML="666，恭喜豆豆通关了</br>截图联系静宝可领取七夕奖励哦"+score;
+        document.getElementById("result").innerHTML="666，恭喜豆豆通关了</br>截图联系静宝可领取七夕奖励哦";
     }
 }
 function go() {
@@ -200,7 +200,7 @@ function cheatingMan(humanChoice) {
     document.getElementById("computerName").innerHTML= "作弊爷爷" ;
     if (humanChoice==="rock") {
         r = Math.random();
-        if (r<0.3) {
+        if (r<0.1) {
         document.getElementById("computerChoice").innerHTML= "<img src='images/paper.png'>" ;
         return "paper";
         }
@@ -210,7 +210,7 @@ function cheatingMan(humanChoice) {
     }
     else if (humanChoice==="scissors") {
         r = Math.random();
-        if (r<0.3) {
+        if (r<0.1) {
             document.getElementById("computerChoice").innerHTML= "<img src='images/rock.png'>" ;
             return "rock";
         }
@@ -220,7 +220,7 @@ function cheatingMan(humanChoice) {
     }
     else{
         r = Math.random();
-        if (r<0.3) {
+        if (r<0.1) {
             document.getElementById("computerChoice").innerHTML= "<img src='images/scissors.png'>" ;
             return"scissors"
         }
