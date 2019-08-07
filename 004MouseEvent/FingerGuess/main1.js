@@ -1,4 +1,4 @@
-var r,score=0,grade=1,LastHumanChoice,humanChoice;
+var r,score=0,grade=7,LastHumanChoice,humanChoice;
 var LastWinner="no one",LastComputerChoice="rock";
 function rock() {
     document.getElementById("myChoice").innerHTML="<img src=\"images/rock.png\"/>";
@@ -43,7 +43,7 @@ function judge(myChoice) {
         computerResult=randomPlayer();
     }
     else if(grade===7){
-        computerResult = cheatingMan();
+        computerResult =  Cai();
     }
 
     if (myChoice==="rock") {
@@ -88,7 +88,7 @@ function judge(myChoice) {
         }
 
     }
-    if (score>=5) {
+    if (score>=4) {
         score=0;
         grade+=1;
     }
@@ -229,8 +229,23 @@ function randomPlayer() {
         }
     }
 }*/
-function cheatingMan(humanChoice) {
+function Cai() {
+    r = Math.random()*3;
+    var temp;
+    if (r<2){
+        document.getElementById("computerChoice").innerHTML= "<img src='images/rock.png'>" ;
+        temp = "rock";
+    }
+    else if (r<2.5){
+        document.getElementById("computerChoice").innerHTML= "<img src='images/scissors.png'>" ;
+        temp ="scissors";
+    }
+    else{
+        document.getElementById("computerChoice").innerHTML= "<img src='images/paper.png'>" ;
+        temp ="paper";
+    }
     document.getElementById("computerName").innerHTML= "专哄豆豆的猜猜拳" ;
-    document.getElementById("computerChoice").innerHTML= "<img src='images/"+LastHumanChoice+".png'>" ;
-    return LastHumanChoice;
+    document.getElementById("computerChoice").innerHTML= "<img src='images/"+temp+".png'>" ;
+    return temp;
+
 }
