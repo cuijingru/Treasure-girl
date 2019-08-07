@@ -1,4 +1,4 @@
-var r,score=0,grade=1,LastHumanChoice,humanChoice;
+var r,score=3,grade=1,LastHumanChoice,humanChoice;
 var LastWinner="no one",LastComputerChoice="rock";
 function rock() {
     document.getElementById("myChoice").innerHTML="<img src=\"images/rock.png\"/>";
@@ -22,67 +22,67 @@ function paper() {
 function judge(myChoice) {
     r = 3 * Math.random();
     var computerResult;
-    if(grade==1){
+    if(grade===1){
         computerResult = onlyRocker();
     }
-    else if(grade==2){
-        computerResult = LearnfromHuman();
+    else if(grade===2){
+        computerResult = LearnFromHuman();
     }
-    else if(grade==3){
+    else if(grade===3){
         computerResult = winnerAgain();
         LastComputerChoice = computerResult;
     }
-    else if(grade==4){
+    else if(grade===4){
         computerResult=loseChange();
         LastComputerChoice=computerResult;
     }
-    else if(grade==5){
+    else if(grade===5){
         computerResult=lovePaper();
     }
-    else if(grade==6){
+    else if(grade===6){
         computerResult=randomPlayer();
     }
-    else if(grade==7){
+    else if(grade===7){
         computerResult=cheatingMan(humanChoice);
     }
 
-    if (myChoice=="rock") {
-        if (computerResult=="rock"){
+    if (myChoice==="rock") {
+        if (computerResult==="rock"){
             LastWinner="no one";
         }
 
-        else if(computerResult=="scissors"){
+        else if(computerResult==="scissors"){
             LastWinner="human";
             score+=1;
         }
-        else if(computerResult=="paper"){
+        else if(computerResult==="paper"){
             LastWinner="com";
             score-=1;
         }
     }
-    else if (myChoice=="scissors"){
-        if (computerResult=="rock"){
+    else if (myChoice==="scissors"){
+        if (computerResult==="rock"){
             score-=1;
             LastWinner="com";
         }
-        else if(computerResult=="scissors"){
+        else if(computerResult==="scissors"){
             LastWinner="no one";
 
         }
-        else if(computerResult=="paper"){
+        else if(computerResult==="paper"){
             score+=1;
             LastWinner="human";
         }
     }else{
-        if (computerResult=="rock"){
+        if (computerResult==="rock"){
             LastWinner="human";
             score+=1;
         }
-        else if(computerResult=="scissors"){
+        else if(computerResult==="scissors"){
             LastWinner="com";
             score-=1;
         }
-        else if(computerResult=="paper"){
+        else if(computerResult==="paper"){
             LastWinner="no one";
 
         }
