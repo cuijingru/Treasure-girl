@@ -88,7 +88,7 @@ function judge(myChoice) {
         }
 
     }
-    if (score>=3) {
+    if (score>=5) {
         score=0;
         grade+=1;
     }
@@ -200,7 +200,7 @@ function cheatingMan(humanChoice) {
     document.getElementById("computerName").innerHTML= "作弊爷爷" ;
     if (humanChoice==="rock") {
         r = Math.random();
-        if (r<0.1) {
+        if (r<0.3) {
         document.getElementById("computerChoice").innerHTML= "<img src='images/paper.png'>" ;
         return "paper";
         }
@@ -210,7 +210,7 @@ function cheatingMan(humanChoice) {
     }
     else if (humanChoice==="scissors") {
         r = Math.random();
-        if (r<0.1) {
+        if (r<0.3) {
             document.getElementById("computerChoice").innerHTML= "<img src='images/rock.png'>" ;
             return "rock";
         }
@@ -220,7 +220,7 @@ function cheatingMan(humanChoice) {
     }
     else{
         r = Math.random();
-        if (r<0.1) {
+        if (r<0.3) {
             document.getElementById("computerChoice").innerHTML= "<img src='images/scissors.png'>" ;
             return"scissors"
         }
