@@ -43,7 +43,7 @@ function judge(myChoice) {
         computerResult=randomPlayer();
     }
     else if(grade===7){
-        computerResult=cheatingMan(humanChoice);
+        computerResult = cheatingMan();
     }
 
     if (myChoice==="rock") {
@@ -196,7 +196,7 @@ function randomPlayer() {
     return temp;
 
 }
-function cheatingMan(humanChoice) {
+/*function cheatingMan(humanChoice) {
     document.getElementById("computerName").innerHTML= "作弊爷爷" ;
     if (humanChoice==="rock") {
         r = Math.random();
@@ -228,4 +228,9 @@ function cheatingMan(humanChoice) {
             return computerChoice();
         }
     }
+}*/
+function cheatingMan(humanChoice) {
+    document.getElementById("computerName").innerHTML= "专哄豆豆的猜猜拳" ;
+    document.getElementById("computerChoice").innerHTML= "<img src='images/"+LastHumanChoice+".png'>" ;
+    return LastHumanChoice;
 }
