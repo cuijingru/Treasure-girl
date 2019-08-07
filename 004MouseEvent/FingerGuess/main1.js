@@ -179,11 +179,11 @@ function lovePaper() {
 function randomPlayer() {
     r = Math.random()*3;
     var temp;
-    if (r<1.3){
+    if (r<1){
         document.getElementById("computerChoice").innerHTML= "<img src='images/rock.png'>" ;
         temp = "rock";
     }
-    else if (r<2.3){
+    else if (r<2.5){
         document.getElementById("computerChoice").innerHTML= "<img src='images/scissors.png'>" ;
         temp ="scissors";
     }
