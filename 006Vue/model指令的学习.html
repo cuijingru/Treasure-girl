@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h4>{{msg}}</h4>
+    <input type="text"  style="width:100%;" v-model ="msg">
+</div>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'大家都是好学生'
+        },
+        methods:{}
+    });
+</script>
+
+</body>
+</html>

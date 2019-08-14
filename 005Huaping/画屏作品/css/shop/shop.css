@@ -132,18 +132,28 @@ p{
 }
 hr{
     width: 80%;
-    margin-left: 10%; 
+    margin-left: 10%;
     margin-bottom: 20px;
 }
 .content-top{
-    width: 80%;
+    background: url(../../picture/shop/content-top.png) no-repeat;
+    background-size: 100%,100%;
+    width: 90%;
     margin-left: 5.2%;
-    height: 63px;
+    height: 90px;
+
 }
 .content-bottom{
-    width: 80%;
+    background: url(../../picture/shop/content-bottom.png) no-repeat;
+    background-size: 100%,100%;
+    width: 90%;
     margin-left: 5.2%;
-    height: 63px;
+    height: 90px;
+    position: absolute;
+
+    /*width: 80%;*/
+    /*margin-left: 5.2%;*/
+    /*height: 63px;*/
 }
 .content{
     width: 80%;
@@ -261,7 +271,7 @@ hr{
 .footer-all{
     height: 100%;
     padding-left:10%;
-    padding-right: 10%; 
+    padding-right: 10%;
     background: url(../../picture/shop/footer.png);
 }
 .footer-left{
