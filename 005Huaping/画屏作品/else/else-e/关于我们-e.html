@@ -1,11 +1,11 @@
 <!doctype html>
 <!DOCTYPE html>
 <html>
-    <head>
-    	<title>About us</title>
-    	<meta charset="utf-8">
-        <link rel="short icon" type="text/css" href="./logo.png"/>
-    	<style type="text/css">
+<head>
+    <title>Author's Wish</title>
+    <meta charset="utf-8">
+    <link rel="short icon" type="text/css" href="./logo.png"/>
+    <style type="text/css">
         *{
             padding: 0;
             margin: 0;
@@ -87,7 +87,7 @@
             text-decoration: none;
         }
         a:hover{
-                color: #C2C2C2;
+            color: #C2C2C2;
         }
         .list{
             width: 30%;
@@ -134,8 +134,9 @@
             text-align: left;
             margin-right: 30px;
             text-indent: 2em;
-            line-height: 30px;
-            font-family: "黑体";
+            line-height: 60px;
+            font-family: "楷体";
+            font-size: 30px;
         }
         #c-title{
             margin-top: 50px;
@@ -153,6 +154,16 @@
             float: left;
             text-align: center;
         }
+        .footer ul{
+            margin-left: 40%;
+        }
+        .footer ul li{
+            float: left;
+            font-family: "黑体";
+            font-size: 18px;
+            color: black;
+            list-style: none;
+        }
         #txt{
             margin-top: 50px;
         }
@@ -161,97 +172,104 @@
             margin-top: -84px;
             margin-left: 695px;
         }
-        .yw{
-            line-height: 50px;
-            font-size: 50px;
-            padding-top: 200px;
-        }
-    	</style>
-    </head>
-    <body>
+    </style>
+</head>
+<body>
 
-        <div class="bg">
+<div class="bg">
+</div>
+<div class="top">
+    <div id="logo">
+        <a href="../../index (2).html"><img src="../logo.png" width="150" height="130" style="float: left;"></a>
+    </div>
+    <div class="choosecolor">
+        <ul class="top1">
+            <li id="ch-n">n</li>
+            <li id="ch-r">r</li>
+            <li id="ch-b">b</li>
+            <li id="ch-g">g</li>
+        </ul>
+    </div>
+    <ul class="top2">
+        <li><a href="../../login-e.html">The login</a></li>
+        <li>|</li>
+        <li><a href="../../join-e.html">join us</a></li>
+        <li>|</li>
+        <li><a href="../../search-e.html">Search</a></li>
+    </ul>
+</div>
+<div class="top3">
+</div>
+<div class="center">
+    <div class="list">
+        <div class="tab">
+            <ul>
+                <li><a href="DC画屏-e.html">SanxiCP</a></li>
+                <li><a href="关于我们-e.html">Author's Wish</a></li>
+                <li><a href="意见反馈-e.html">Feedback</a></li>
+                <li><a href="联系我们-e.html">Contact us</a></li>
+                <li><a href="服务条例-e.html">Services ordiance</a></li>
+                <li><a href="隐私政策-e.html">Privacy policy</a></li>
+            </ul>>
         </div>
-        <div class="top">
-            <div id="logo">
-            <a href="../../index.html"><img src="../logo.png" width="150" height="130" style="float: left;"></a>
-        </div>
-            <div class="choosecolor">
-                <ul class="top1">
-                    <li id="ch-n">n</li>
-                    <li id="ch-r">r</li>
-                    <li id="ch-b">b</li>
-                    <li id="ch-g">g</li>
-                </ul>
-            </div>
-            <ul class="top2">
-                <li><a href="../../login-e.html">The login</a></li>
-                <li>|</li>
-                <li><a href="../../join-e.html">join us</a></li>
-                <li>|</li>
-                <li><a href="../../search-e.html">Search</a></li>
-            </ul>
-        </div>
-        <div class="top3">
-        </div>
-        <div class="center">
-            <div class="list">
-                <div class="tab">
-                    <ul>
-                        <li><a href="DC画屏-e.html">SanxiCP</a></li>
-                        <li><a href="关于我们-e.html">Communication</a></li>
-                        <li><a href="意见反馈-e.html">Feedback</a></li>
-                        <li><a href="联系我们-e.html">Contact us</a></li>
-                        <li><a href="服务条例-e.html">Services ordiance</a></li>
-                        <li><a href="隐私政策-e.html">Privacy policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="contant">
-                <p id="c-title">Communication community</p>
-                <hr>
-                <p class="yw">jia zhuang zhe li you ying wen</p>
-            </div>
-        </div>
-        <div class="footer">
-            <ul id="txt">
-                <li>All rights reserved ©2019-Painted Screen</li>
-            </ul>
-            <img src="wu.png" width="80" height="110" class="wu">
-        </div>
-        <script type="text/javascript">
-            var cn=document.getElementById("ch-n");
-            var cr=document.getElementById("ch-r");
-            var cb=document.getElementById("ch-b");
-            var cg=document.getElementById("ch-g");
-            var t=document.getElementsByClassName("top")[0];
-            var l=document.getElementsByClassName("list")[0];
-            var c=document.getElementsByClassName("contant")[0];
-            var f=document.getElementsByClassName("footer")[0];
-            cn.onclick=function(){
-                t.style.background="url(white.png)";
-                l.style.backgroundColor="rgba(256,256,256,0.2)";
-                c.style.backgroundColor="rgba(256,256,256,0.2)";
-                f.style.backgroundColor="rgba(256,256,256,0.2)";
-            }
-            cr.onclick=function(){
-                t.style.background="url(red.png)";
-                l.style.backgroundColor="rgba(256,0,0,0.2)";
-                c.style.backgroundColor="rgba(256,0,0,0.2)";
-                f.style.backgroundColor="rgba(256,0,0,0.2)";
-            }
-            cb.onclick=function(){
-                t.style.background="url(blue.png)";
-                l.style.backgroundColor="rgba(135,206,235,0.2)";
-                c.style.backgroundColor="rgba(135,206,235,0.2)";
-                f.style.backgroundColor="rgba(135,206,235,0.2)";
-            }
-            cg.onclick=function(){
-                t.style.background="url(green.png)";
-                l.style.backgroundColor="rgba(0,128,0,0.2)";
-                c.style.backgroundColor="rgba(0,128,0,0.2)";
-                f.style.backgroundColor="rgba(0,128,0,0.2)";
-            }
-        </script>
-    </body>
+    </div>
+    <div class="contant">
+        <p id="c-title">Author's Wish</p>
+        <hr>
+        <p>Cui Jingru:This is a work with soul. I hope it can carry the dreams of folk painters and build a stage for free painters.</p>
+        <p>Shen Simin:This work has its unique style and unique mode. I hope that more and more people like the screen.</p>
+        <p>yang lingzi:After one year, from the very beginning to the present website, I hope everything goes according to plan.</p>
+        <p>Liu Chang: The wind of SanxiCP cares about beauty and chivalry. I hope that painting screen can bring a wonderful experience.</p>
+        <p>Tang weize: The beauty of the SanxiCP should be carefully tasted, and I hope that the painting screen will get bigger and better.</p>
+    </div>
+</div>
+<div class="footer">
+    <ul id="txt">
+        <li><a href="../../index.html">Folk trading</a></li>
+        <li>|</li>
+        <li><a href="../../home-e.html">Appreciation of CP</a></li>
+        <li>|</li>
+        <li><a href="../../communicate.html">Voice of Studio</a></li>
+        <li>|</li>
+        <li><a href="../../shop.html">My gallery</a></li>
+        <li>|</li>
+        <li>All rights reserved ©2019-Painted Screen</li>
+    </ul>
+    <img src="wu.png" width="80" height="110" class="wu">
+</div>
+<script type="text/javascript">
+    var cn=document.getElementById("ch-n");
+    var cr=document.getElementById("ch-r");
+    var cb=document.getElementById("ch-b");
+    var cg=document.getElementById("ch-g");
+    var t=document.getElementsByClassName("top")[0];
+    var l=document.getElementsByClassName("list")[0];
+    var c=document.getElementsByClassName("contant")[0];
+    var f=document.getElementsByClassName("footer")[0];
+    cn.onclick=function(){
+        t.style.background="url(white.png)";
+        l.style.backgroundColor="rgba(256,256,256,0.2)";
+        c.style.backgroundColor="rgba(256,256,256,0.2)";
+        f.style.backgroundColor="rgba(256,256,256,0.2)";
+    }
+    cr.onclick=function(){
+        t.style.background="url(red.png)";
+        l.style.backgroundColor="rgba(256,0,0,0.2)";
+        c.style.backgroundColor="rgba(256,0,0,0.2)";
+        f.style.backgroundColor="rgba(256,0,0,0.2)";
+    }
+    cb.onclick=function(){
+        t.style.background="url(blue.png)";
+        l.style.backgroundColor="rgba(135,206,235,0.2)";
+        c.style.backgroundColor="rgba(135,206,235,0.2)";
+        f.style.backgroundColor="rgba(135,206,235,0.2)";
+    }
+    cg.onclick=function(){
+        t.style.background="url(green.png)";
+        l.style.backgroundColor="rgba(0,128,0,0.2)";
+        c.style.backgroundColor="rgba(0,128,0,0.2)";
+        f.style.backgroundColor="rgba(0,128,0,0.2)";
+    }
+</script>
+</body>
 </html>
