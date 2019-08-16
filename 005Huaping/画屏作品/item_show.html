@@ -14,7 +14,7 @@
 	<script src="js/swiper.min.js" charset="UTF-8"></script>
 	<script src="js/global.js" charset="UTF-8"></script>
 	<script src="js/jquery.DJMask.2.1.1.js" charset="UTF-8"></script>
-	<title>画屏</title>
+	<title>购买界面</title>
 </head>
 <body>
 	<!-- 顶部tab -->
@@ -28,9 +28,9 @@
 			<div class="pull-right">
 				<a href="login.html"><span class="cr">登录</span></a>
 				<a href="join.html">注册</a>
-				<a href="index.html">我的画屏</a>
+				<a href="shop.html">用户中心</a>
 				<a href="index.html">我的订单</a>
-				<a href="index.html">积分平台</a>
+				<a href="shop.html">积分管理</a>
 			</div>
 		</div>
 	</div>
@@ -74,10 +74,9 @@
 				<a href="index.html"><li class="active">民间交易坊</li></a>
 				<a href="home.html"><li>国画鉴赏</li></a>
 				<a href="communicate.html"><li>画室之声</li></a>
-				<a href="else/服务条例.html"><li>服务条例</li></a>
-				<a href="else/联系我们.html"><li>联系我们</li></a>
-				<a href="else/意见反馈.html"><li>意见反馈</li></a>
-				<a href="item_remove.html"><li></li></a>
+				<a href="shop.html"><li>我的画廊</li></a>
+				<a href="else/DC画屏.html"><li>画屏简介</li></a>
+				<a href="else/关于我们.html"><li>作者寄语</li></a>
 			</ul>
 		</div>
 	</div>
@@ -343,7 +342,7 @@
 				<div class="picked-button-prev"></div>
 				<div class="picked-button-next"></div>
 				<script>
-					$(document).ready(function(){ 
+					$(document).ready(function(){
 						// 顶部banner轮播
 						var picked_swiper = new Swiper('.picked-swiper', {
 							loop : true,
@@ -387,7 +386,7 @@
 								<li role="presentation"><a href="#bad" role="tab" data-toggle="tab" aria-controls="bad">差评 <span class="badge">0</span></a></li>
 							</ul>
 						</div>
-				
+
 					<script>
 						$(document).ready(function(){
 							var recommends = new Swiper('.recommends-swiper', {
@@ -398,7 +397,7 @@
 					</script>
 				</div>
 			</div>
-			
+
 			<script>
 				$(document).ready(function(){
 					$('#descCate').smartFloat(0);
@@ -412,7 +411,7 @@
 					});
 				});
 			</script>
-		</section>
+			</div>	</section>
 	</div>
 	<!-- 右侧菜单 -->
 	<div class="right-nav">
